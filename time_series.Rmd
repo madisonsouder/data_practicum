@@ -1,0 +1,573 @@
+---
+title: "Time_series"
+author: "Madison Souder"
+date: "2025-07-19"
+output: html_document
+---
+
+-   Load Packages/Libraries
+
+```{r}
+library(tidyverse)
+library(magrittr)
+library(patchwork)
+library(scales)
+
+library(feasts)
+library(fable)
+library(forecast)
+library(tsibble)
+library(Metrics)
+```
+
+-   Load Data
+
+```{r}
+WHO_vax <- read.csv("WHO_vaccination_rates.csv", check.names = FALSE)
+WHO_vax_1 <- read.csv("WHO_vaccination_1.csv", check.names = FALSE)
+WHO_vax_2 <- read.csv("WHO_vaccination_2.csv", check.names = FALSE)
+WHO_vax_3 <- read.csv("WHO_vaccination_3.csv", check.names = FALSE)
+
+cases <- read.csv("preventable_disease_cases.csv", check.names = FALSE)
+
+kid_vax <- read_csv("All_Vaccination_Data.csv")
+```
+#### **Step 5: Time Series Forecast**
+
+-   Kindergarten Vaccination Rates
+
+First I prepared the data.
+
+```{r}
+year <- kid_vax %>%
+  filter(`Vaccine/Exemption` != "Exemption") %>%
+  filter(Geography != "U.S. Median") %>%
+  group_by(`School Year`) %>% 
+  summarize(
+    Avg_Estimate = mean(`Estimate (%)`, na.rm = TRUE))
+```
+
+I then turned the data frame into an tsibble.
+
+```{r}
+year_ts <- year %>%
+  filter(`School Year` != "2009-10") %>%
+  mutate(start_year = as.integer(str_sub(`School Year`, 1, 4))) %>%
+  as_tsibble(index = start_year)
+```
+
+I exclude the 2009-2010 school year because their is a gap in the data. The 2010 - 2011 is not in the data.
+
+```{r}
+kid_vax_ets <- year_ts %>%
+  model(AAN = ETS(Avg_Estimate ~ error("A") + trend("A") + season("N")))
+
+report(kid_vax_ets)
+gg_tsresiduals(kid_vax_ets)
+
+fc_kid_vax_ets <- kid_vax_ets %>%
+  forecast(h = 6)
+```
+
+I ran an ETS (A, A, N) model because their is an obvious trend. Even through an ANN model fits better.
+
+```{r}
+autoplot(fc_kid_vax_ets, year_ts) +
+  labs(title = "Kindergarten Vaccination Compliance",
+       subtitle = "6-year forecast using an ETS (A, A, N) Model",
+       x = "Start of School Year",
+       y = "Compliance (%)") +
+  scale_x_continuous (breaks = seq(2011, 2029, by = 2)) +
+  scale_y_continuous(limits = c(88, 95),
+                     breaks = seq(88, 95, by = 2)) +
+  annotate("text", x = 2017, y = 91, colour = "black", 
+           label = "AICc = 27.39") +
+  annotate("text", x = 2017, y = 90, colour = "black", 
+           label = "BIC = 21.65") +
+  theme_light()
+```
+
+I ran this to examine the bounds of the 80% and 95%
+
+```{r}
+fc_kid_vax_ets %>%
+  hilo(level = c(80, 95)) %>%
+  unpack_hilo(c("80%", "95%")) %>%
+  select(start_year,
+    lower_80 = `80%_lower`,
+    upper_80 = `80%_upper`,
+    lower_95 = `95%_lower`,
+    upper_95 = `95%_upper`,
+    .mean)
+```
+
+
+-   Kindergarten Exemption Rates
+
+First I prepared the data.
+
+```{r}
+year_exemp <- kid_vax %>%
+  filter(`Vaccine/Exemption` == "Exemption") %>%
+  filter(Geography != "U.S. Median") %>%
+  group_by(`School Year`) %>%
+  summarise(total_exemptions = sum(`Number of Exemptions`, na.rm = TRUE),
+            avg_exemption_rate = mean(`Estimate (%)`, na.rm = TRUE))
+```
+
+Then I turned the data frame into a tsibble.
+
+```{r}
+year_exemp_ts <- year_exemp %>%
+  filter(`School Year` != "2009-10") %>%
+  mutate(start_year = as.integer(str_sub(`School Year`, 1, 4))) %>%
+  as_tsibble(index = start_year)
+```
+
+I exclude the 2009-2010 school year because their is a gap in the data. The 2010 - 2011 is not in the data.
+
+```{r}
+kid_exemp_ets <- year_exemp_ts %>%
+  model(AAN = ETS(avg_exemption_rate ~ error("A") + trend("A") + season("N")))
+
+report(kid_exemp_ets)
+gg_tsresiduals(kid_exemp_ets)
+
+fc_kid_exemp_ets <- kid_exemp_ets %>%
+  forecast(h = 6) 
+```
+
+I once again used an A, A, N model even through an A, N, N model fit better.
+
+```{r}
+autoplot(fc_kid_exemp_ets, year_exemp_ts) +
+  labs(title = "Kindergarten Exemptions Rates",
+       subtitle = "6-year forecast using an ETS (A, A, N) Model",
+       x = "Start of School Year",
+       y = "Exemption Rate (%)") +
+  scale_x_continuous (breaks = seq(2011, 2029, by = 2)) +
+  annotate("text", x = 2017, y = 3, colour = "black", 
+           label = "AICc = 7.29") +
+  annotate("text", x = 2017, y = 2.75, colour = "black", 
+           label = "BIC = 1.54") +
+  theme_light()
+```
+
+I ran this to examine the bounds of the 80% and 95%
+
+```{r}
+fc_kid_exemp_ets %>%
+  hilo(level = c(80, 95)) %>%
+  unpack_hilo(c("80%", "95%")) %>%
+  select(start_year,
+    lower_80 = `80%_lower`,
+    upper_80 = `80%_upper`,
+    lower_95 = `95%_lower`,
+    upper_95 = `95%_upper`,
+    .mean)
+```
+
+-   Kindergarten Vaccination Rates by Vaccine....?
+
+First I prepared the data.
+
+```{r}
+type_comp <- kid_vax %>% 
+  filter(`Vaccine/Exemption` != "Exemption") %>% 
+  filter(`Geography Type` != "U.S. Median") %>% 
+  group_by(`School Year`, `Vaccine/Exemption`) %>%  
+  summarize( 
+    Avg_Estimate = mean(`Estimate (%)`, na.rm = TRUE), 
+    .groups = "drop") 
+```
+
+Then I turned it into a tsibble.
+
+```{r}
+type_comp_ts <- type_comp %>%
+  filter(`School Year` != "2009-10") %>%
+  mutate(start_year = as.integer(str_sub(`School Year`, 1, 4))) %>%
+  as_tsibble(index = start_year, 
+             key = `Vaccine/Exemption`)
+```
+
+```{r}
+kid_type_comp_ets <- type_comp_ts %>%
+  model(ETS(Avg_Estimate))
+
+report(kid_type_comp_ets)
+kid_type_comp_ets %>% filter(`Vaccine/Exemption` == "DTP, DTaP, or DT") %>% report()
+kid_type_comp_ets %>% filter(`Vaccine/Exemption` == "Hepatitis B") %>% report()
+kid_type_comp_ets %>% filter(`Vaccine/Exemption` == "MMR") %>% report()
+kid_type_comp_ets %>% filter(`Vaccine/Exemption` == "Polio") %>% report()
+kid_type_comp_ets %>% filter(`Vaccine/Exemption` == "Varicella") %>% report()
+
+fc_kid_type_comp_ets <- kid_type_comp_ets %>%
+  forecast(h = 6)
+```
+
+
+```{r}
+ggplot(type_comp_ts, aes(x = start_year, y = Avg_Estimate)) +
+  geom_line(color = "black") +  # Original data
+  geom_line(data = augment(kid_type_comp_ets), aes(y = .fitted), color = "red", linetype = "dashed") +
+  facet_wrap(~`Vaccine/Exemption`, scales = "free_y") +
+  labs(title = "Original vs Fitted ETS Model",
+       y = "Vaccination Rate",
+       x = "Year") +
+  theme_minimal()
+```
+
+```{r}
+autoplot(fc_kid_type_comp_ets, type_comp_ts) +
+  labs(title = "Kindergarten Vaccination Compliance by Vaccine",
+       subtitle = "6-year Forecasting Using an ETS Model",
+       y = "Compliance (%)",
+       x = "Start of School Year") +
+  facet_wrap(~`Vaccine/Exemption`, scales = "free_y") +
+  theme_light()
+```
+
+-   1st Dose Vaccination Rates
+
+First I prepared the data.
+
+```{r}
+year_vax_1 <- WHO_vax_1 %>%
+  group_by(year, dose_type) %>%
+  summarize(Avg_Estimate = mean(coverage, na.rm = TRUE),
+           .groups = "drop")
+```
+
+Then I turned the dataframe into a tsibble.
+
+```{r}
+year_vax_1_ts <- year_vax_1 %>%
+  as_tsibble(index = year, key = dose_type)
+```
+
+
+```{r}
+year_vax_1_ets <- year_vax_1_ts %>%
+  model(ETS())
+
+report(year_vax_1_ets)
+
+year_vax_1_ets %>% filter(dose_type == "DTP-containing vaccine, 1st dose") %>% report()
+year_vax_1_ets %>% filter(dose_type == "HepB, birth dose") %>% report()
+year_vax_1_ets %>% filter(dose_type == "Inactivated polio-containing vaccine, 1st dose") %>% report()
+year_vax_1_ets %>% filter(dose_type == "Measles-containing vaccine, 1st dose") %>% report()
+year_vax_1_ets %>% filter(dose_type == "Rubella-containing vaccine, 1st dose") %>% report()
+
+fc_year_vax_1_ets <-year_vax_1_ets %>%
+  forecast(h = 6)
+```
+
+I wanted to see how to model fitted the original data.
+
+```{r}
+ggplot(year_vax_1_ts, aes(x = year, y = Avg_Estimate)) +
+  geom_line(color = "black") +  # Original data
+  geom_line(data = augment(year_vax_1_ets), aes(y = .fitted), color = "red", linetype = "dashed") +
+  facet_wrap(~ dose_type, scales = "free_y") +
+  labs(title = "Original vs Fitted ETS Model",
+       y = "Vaccination Rate",
+       x = "Year") +
+  theme_minimal()
+```
+
+```{r}
+autoplot(fc_year_vax_1_ets, year_vax_1_ts) +
+  labs(title = "Vaccine Compliance by Vaccine (1st Dose Only)",
+       subtitle = "6-year Forecasting using an ETS Model",
+       y = "Compliance (%)",
+       x = "Year") +
+  facet_wrap(~ dose_type, scales = "free",
+              labeller = as_labeller(c( 
+                "DTP-containing vaccine, 1st dose" = "DTP",
+                "HepB, birth dose" = "Hepatitis B",
+                "Inactivated polio-containing vaccine, 1st dose" = "Polio",
+                "Measles-containing vaccine, 1st dose" = "Measles-containing",
+                "Rubella-containing vaccine, 1st dose" = "Rubella-containing"))) +
+  theme_light()
+```
+
+```{r}
+fc_year_vax_1_ets %>%
+  hilo(level = 95) %>% 
+  unpack_hilo(`95%`) %>% 
+  select(year, dose_type, lower_95 = `95%_lower`, upper_95 = `95%_upper`, .mean)
+```
+
+
+-   2nd Dose Vaccination Rates
+
+First I prepared the data.
+
+```{r}
+year_vax_2 <- WHO_vax_2 %>%
+  group_by(year, dose_type) %>%
+  summarize(Avg_Estimate = mean(coverage, na.rm = TRUE),
+           .groups = "drop")
+```
+
+Then I transformed the data frame into a tsibble.
+
+```{r}
+year_vax_2_ts <- year_vax_2 %>%
+  as_tsibble(index = year, key = dose_type)
+```
+
+```{r}
+year_vax_2_ets <- year_vax_2_ts %>%
+  model(ETS())
+
+year_vax_2_ets %>% 
+  filter(dose_type == "Measles-containing vaccine, 2nd dose") %>% report()
+
+fc_year_vax_2_ets <-year_vax_2_ets %>%
+  forecast(h = 6)
+```
+
+
+```{r}
+ggplot(year_vax_2_ts, aes(x = year, y = Avg_Estimate)) +
+  geom_line(color = "black") +  # Original data
+  geom_line(data = augment(year_vax_2_ets), aes(y = .fitted), color = "red", linetype = "dashed") +
+  facet_wrap(~ dose_type, scales = "free_y") +
+  labs(title = "Original vs Fitted ETS Model",
+       y = "Vaccination Rate",
+       x = "Year") +
+  theme_minimal()
+```
+
+
+```{r}
+autoplot(
+  filter(fc_year_vax_2_ets, dose_type == "Measles-containing vaccine, 2nd dose"),
+  filter(year_vax_2_ts, dose_type == "Measles-containing vaccine, 2nd dose")) +
+  labs(title = "Measles-Containing Vaccine Compliance (2nd Dose)",
+       subtitle = "6-year Forecast Using an ETS (A, A, N) Model",
+       y = "Compliance (%)",
+       x = "Year") +
+  scale_x_continuous(limits = c(1995, 2030),
+                     breaks = seq( 1995, 2030, by = 5)) +
+  annotate("text", x = 2015, y = 83, colour = "black", 
+           label = "AICc = 98.57") +
+  annotate("text", x = 2015, y = 80, colour = "black", 
+           label = "BIC = 102.50") +
+  theme_light()
+```
+
+-   3rd Dose Vaccination Rates
+
+First, I prepare the data.
+
+```{r}
+year_vax_3 <- WHO_vax_3 %>%
+  group_by(year, dose_type) %>%
+  summarize(Avg_Estimate = mean(coverage, na.rm = TRUE),
+           .groups = "drop")
+```
+
+Then, I transformed the data frame into a tsibble.
+
+```{r}
+year_vax_3_ts <- year_vax_3 %>%
+  as_tsibble(index = year, key = dose_type)
+```
+
+```{r}
+year_vax_3_ets <- year_vax_3_ts %>%
+  model(ETS())
+
+report(year_vax_3_ets)
+
+year_vax_3_ets %>% filter(dose_type == "DTP-containing vaccine, 3rd dose") %>% report()
+year_vax_3_ets %>% filter(dose_type == "HepB, 3rd dose") %>% report()
+year_vax_3_ets %>% filter(dose_type == "Polio, 3rd dose") %>% report()
+
+
+fc_year_vax_3_ets <-year_vax_3_ets %>%
+  forecast(h = 6)
+```
+
+Seeing how the model fits the data
+
+```{r}
+ggplot(year_vax_3_ts, aes(x = year, y = Avg_Estimate)) +
+  geom_line(color = "black") +  # Original data
+  geom_line(data = augment(year_vax_3_ets), aes(y = .fitted), color = "red", linetype = "dashed") +
+  facet_wrap(~ dose_type, scales = "free_y") +
+  labs(title = "Original vs Fitted ETS Model",
+       y = "Vaccination Rate",
+       x = "Year") +
+  theme_minimal()
+```
+
+```{r}
+autoplot(fc_year_vax_3_ets, year_vax_3_ts) +
+  labs(title = "Vaccination Compliance by Vaccine (3rd Dose)",
+       subtitle = "6-year Forecast Using an ETS Model",
+       y = "Compliance",
+       x = "Year") +
+  facet_wrap(~ dose_type, scales = "free",
+             labeller = as_labeller(c( 
+                "DTP-containing vaccine, 3rd dose" = "DTP",
+                "HepB, 3rd dose" = "Hepatitis B",
+                "Polio, 3rd dose" = "Polio")))+
+  theme_light()
+```
+
+```{r}
+fc_year_vax_3_ets %>%
+  hilo(level = 95) %>% 
+  unpack_hilo(`95%`) %>% 
+  select(year, dose_type, lower_95 = `95%_lower`, upper_95 = `95%_upper`, .mean)
+```
+
+
+*For Presentation*
+
+```{r}
+WHO_vax %<>% 
+  separate(dose_type, into = c("vaccine", "dose"), sep = ", ")
+```
+
+
+Diphtheria
+
+```{r}
+dip_forecast <- WHO_vax %>% 
+  filter(vaccine == "DTP-containing vaccine") %>%
+  group_by(year, dose) %>%
+  summarize(Avg_Estimate = mean(coverage, na.rm = TRUE),
+            .groups = "drop") %>%
+    as_tsibble(index = year, key = dose)
+  
+dip_forecast_ets <- dip_forecast %>%
+  model(ETS())
+  
+fc_dip_forecast_ets <- dip_forecast_ets %>%
+  forecast(h = 6)
+
+fc_dip_forecast_ets %>%
+  hilo(level = 95) %>% 
+  unpack_hilo(`95%`) %>% 
+  select(year, dose, lower_95 = `95%_lower`, upper_95 = `95%_upper`, .mean)
+
+
+autoplot(fc_dip_forecast_ets, dip_forecast) +
+  labs(title = "DTP Vaccine Compliance",
+       subtitle = "6-year Forecasting using an ETS Model",
+       y = "Compliance (%)",
+       x = "Year") +
+    theme_light()
+```
+
+
+
+```{r}
+measles_forecast <- WHO_vax %>% 
+  filter(vaccine == "Measles-containing vaccine") %>%
+  group_by(year, dose) %>%
+  summarize(Avg_Estimate = mean(coverage, na.rm = TRUE),
+            .groups = "drop") %>%
+    as_tsibble(index = year, key = dose)
+  
+measles_forecast_ets <- measles_forecast %>%
+  model(ETS())
+  
+fc_measles_forecast_ets <- measles_forecast_ets %>%
+  forecast(h = 6)
+
+fc_measles_forecast_ets %>%
+  hilo(level = 95) %>% 
+  unpack_hilo(`95%`) %>% 
+  select(year, dose, lower_95 = `95%_lower`, upper_95 = `95%_upper`, .mean)
+
+
+autoplot(fc_measles_forecast_ets, measles_forecast) +
+  labs(title = "Measles-containg Vaccine Compliance",
+       subtitle = "6-year Forecasting using an ETS Model",
+       y = "Compliance (%)",
+       x = "Year") +
+    theme_light()
+```
+
+```{r}
+rubella_forecast <- WHO_vax %>% 
+  filter(vaccine == "Rubella-containing vaccine") %>%
+  group_by(year, dose) %>%
+  summarize(Avg_Estimate = mean(coverage, na.rm = TRUE),
+            .groups = "drop") %>%
+    as_tsibble(index = year, key = dose)
+  
+rubella_forecast_ets <- rubella_forecast %>%
+  model(ETS())
+  
+fc_rubella_forecast_ets <- rubella_forecast_ets %>%
+  forecast(h = 6)
+
+fc_rubella_forecast_ets %>%
+  hilo(level = 95) %>% 
+  unpack_hilo(`95%`) %>% 
+  select(year, dose, lower_95 = `95%_lower`, upper_95 = `95%_upper`, .mean)
+
+
+autoplot(fc_rubella_forecast_ets, rubella_forecast) +
+  labs(title = "Rubella-containg Vaccine Compliance",
+       subtitle = "6-year Forecasting using an ETS Model",
+       y = "Compliance (%)",
+       x = "Year") +
+    theme_light()
+```
+
+```{r}
+ hep_forecast <- WHO_vax %>% 
+    filter(vaccine == "HepB") %>%
+    group_by(year, dose) %>%
+    summarize(Avg_Estimate = mean(coverage, na.rm = TRUE),
+              .groups = "drop") %>%
+    as_tsibble(index = year, key = dose)
+  
+  hep_forecast_ets <- hep_forecast %>%
+    model(ETS())
+  
+  fc_hep_forecast_ets <- hep_forecast_ets %>%
+    forecast(h = 6)
+  
+  #Hep B Forecasting Plot
+  autoplot(fc_hep_forecast_ets, hep_forecast) +
+      labs(title = "Hepatitis B Vaccine Compliance",
+           subtitle = "6-year Forecasting using an ETS Model",
+           y = "Compliance (%)",
+           x = "Year") +
+      theme_light()
+```
+
+```{r}
+pol_forecast <- WHO_vax %>% 
+    filter(vaccine %in% c("Inactivated polio-containing vaccine", "Polio")) %>%
+    filter(dose != "2nd dose") %>%
+    group_by(year, dose) %>%
+    summarize(Avg_Estimate = mean(coverage, na.rm = TRUE),
+              .groups = "drop") %>%
+    as_tsibble(index = year, key = dose)
+  
+  pol_forecast_ets <- pol_forecast %>%
+    model(ETS())
+  
+  fc_pol_forecast_ets <- pol_forecast_ets %>%
+    forecast(h = 6)
+  
+  #Polio Forecasting Plot
+autoplot(fc_pol_forecast_ets, pol_forecast) +
+      labs(title = "Polio Vaccine Compliance",
+           subtitle = "6-year Forecasting using an ETS Model",
+           y = "Compliance (%)",
+           x = "Year") +
+      facet_wrap(~ dose, scales = "free") +
+      theme_light()
+```
+

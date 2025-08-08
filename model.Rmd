@@ -1,0 +1,270 @@
+---
+title: "predictive_model"
+author: "Madison Souder"
+date: "2025-07-21"
+output: html_document
+---
+
+-   Load Packages/Libraries
+
+```{r}
+library(tidyverse)
+library(caret)
+library(feasts)
+library(fable)
+library(forecast)
+library(tsibble)
+library(Metrics)
+library(magrittr)
+```
+
+-   Load data
+
+```{r}
+regress <- read_csv("regression_data.csv")
+WHO_vax <- read_csv("WHO_vaccination_rates.csv")
+cases <- read_csv("preventable_disease_cases.csv")
+```
+
+
+#### **Step 6: Predictive Model**
+
+```{r}
+colnames(regress)
+unique(regress$dose_type)
+unique(regress$disease)
+```
+
+-   Prepare the data
+
+```{r}
+model_map <- tibble(
+  disease = c("Diphtheria", "Diphtheria", "Total tetanus", "Total tetanus",
+              "Pertussis", "Pertussis", "Measles", "Measles", "Rubella"),
+  dose_type = c("DTP-containing vaccine, 1st dose", 
+                "DTP-containing vaccine, 3rd dose", 
+                "DTP-containing vaccine, 1st dose", 
+                "DTP-containing vaccine, 3rd dose", 
+                "DTP-containing vaccine, 1st dose", 
+                "DTP-containing vaccine, 3rd dose",
+                "Measles-containing vaccine, 1st dose", 
+                "Measles-containing vaccine, 2nd dose",
+                "Rubella-containing vaccine, 1st dose"))
+
+WHO_vax_simple <- WHO_vax %>%
+  group_by(year, dose_type) %>%
+  summarise(coverage = mean(coverage),
+            .groups = "drop")
+
+cases_vax_model <- cases %>%
+  left_join(model_map, by = "disease")
+
+cases_vax_model <- inner_join(cases_vax_model, WHO_vax_simple, 
+                            by = c("year", "dose_type"))
+
+cases_vax_wide <- cases_vax_model %>%
+  # Step 1: Separate the dose_type into vaccine and dose
+  separate(dose_type, into = c("dose_type", "dose_label"), sep = ", ", remove = FALSE) %>%
+  
+  # Step 2: Create new column names for coverage
+  mutate(
+    coverage_label = case_when(
+      str_detect(dose_label, "1st dose") ~ "coverage_1st_dose",
+      str_detect(dose_label, "2nd dose") ~ "coverage_2nd_dose",
+      str_detect(dose_label, "3rd dose") ~ "coverage_3rd_dose",
+      TRUE ~ "coverage_other"
+    )
+  ) %>%
+  
+  # Step 3: Keep only needed columns
+  select(disease, year, cases, dose_type, coverage_label, coverage) %>%
+  
+  # Step 4: Pivot wider so each dose has its own coverage column
+  pivot_wider(
+    names_from = coverage_label,
+    values_from = coverage
+  )
+
+
+
+cases_vax_model %<>%
+  mutate(
+    disease = as.factor(disease),
+    dose_type = as.factor(dose_type))
+```
+
+-   Diphtheria Model
+
+```{r}
+diphtheria_data <- cases_vax_wide %>%
+  filter(disease == "Diphtheria") %>%
+  drop_na(cases, coverage_1st_dose, coverage_3rd_dose)
+
+diphtheria_data %<>% mutate(
+  below_herd_1st = if_else(coverage_1st_dose < 75, 1, 0),
+  below_herd_3rd = if_else(coverage_1st_dose < 75, 1, 0),
+  under_herd_1st = pmax(75 - coverage_1st_dose, 0),
+  under_herd_3rd = pmax(75 - coverage_3rd_dose, 0))
+
+write.csv(diphtheria_data, file = "diptheria_model_data.csv", row.names = FALSE)
+
+set.seed(123)
+dip_split <- sample(c(TRUE, FALSE), nrow(diphtheria_data), replace=TRUE, prob=c(0.8,0.2))
+dip_train <- diphtheria_data[dip_split, ]
+dip_test <- diphtheria_data[!dip_split, ]
+
+
+diphtheria_model <- lm(cases ~ year + coverage_1st_dose + coverage_3rd_dose, 
+                       data = dip_train)
+
+diphtheria_preds <- predict(diphtheria_model, newdata = dip_test)
+
+dip_test_results <- dip_test %>%
+  mutate(predicted_cases = diphtheria_preds)
+
+summary(diphtheria_model)
+
+actual <- dip_test_results$cases
+predicted <- dip_test_results$predicted_cases
+
+mae(actual, predicted)
+rmse(actual, predicted)
+```
+
+-   Total Tetanus Model
+
+```{r}
+tetanus_data <- cases_vax_wide %>%
+  filter(disease == "Total tetanus") %>%
+  drop_na(cases, coverage_1st_dose, coverage_3rd_dose)
+
+write.csv(tetanus_data, file = "tetanus_model_data.csv", row.names = FALSE)
+
+set.seed(123)
+tetanus_split <- sample(c(TRUE, FALSE), nrow(tetanus_data), replace=TRUE, prob=c(0.8,0.2))
+tetanus_train <- tetanus_data[tetanus_split, ]
+tetanus_test <- tetanus_data[!tetanus_split, ]
+
+tetanus_model <- lm(cases ~ year + coverage_1st_dose + coverage_3rd_dose, 
+                    data = tetanus_train)
+
+tetanus_preds <- predict(tetanus_model, newdata = tetanus_test)
+
+tetanus_test_results <- tetanus_test %>%
+  mutate(predicted_cases = tetanus_preds)
+
+summary(tetanus_model)
+
+actual <- tetanus_test_results$cases
+predicted <- tetanus_test_results$predicted_cases
+
+mae(actual, predicted)
+rmse(actual, predicted)
+```
+
+-   Pertussis Model
+
+```{r}
+pertussis_data <- cases_vax_wide %>%
+  filter(disease == "Pertussis") %>%
+  drop_na(cases, coverage_1st_dose, coverage_3rd_dose)
+
+pertussis_data %<>% mutate(
+  under_herd_1st = pmax(92 - coverage_1st_dose, 0),
+  under_herd_3rd = pmax(92 - coverage_3rd_dose, 0))
+
+write.csv(pertussis_data, file = "pertussis_model_data.csv", row.names = FALSE)
+
+set.seed(123)
+pertussis_split <- sample(c(TRUE, FALSE), nrow(pertussis_data), replace=TRUE, prob=c(0.8,0.2))
+pertussis_train <- pertussis_data[pertussis_split, ]
+pertussis_test <- pertussis_data[!pertussis_split, ]
+
+pertussis_model <- lm(cases ~ year + coverage_3rd_dose + under_herd_3rd, 
+                      data = pertussis_train)
+
+pertussis_preds <- predict(pertussis_model, newdata = pertussis_test)
+
+pertussis_test_results <- pertussis_test %>%
+  mutate(predicted_cases = pertussis_preds)
+
+summary(pertussis_model)
+
+actual <- pertussis_test_results$cases
+predicted <- pertussis_test_results$predicted_cases
+
+mae(actual, predicted)
+rmse(actual, predicted)
+```
+
+-   Rubella Model
+
+```{r}
+rubella_data <- cases_vax_wide %>%
+  filter(disease == "Rubella") %>%
+  drop_na(cases, coverage_1st_dose)
+
+rubella_data %<>% mutate(
+  below_herd_1st = if_else(coverage_1st_dose < 85, 1, 0),
+  under_herd_1st = pmax(85 - coverage_1st_dose, 0))
+
+write.csv(rubella_data, file = "rubella_model_data.csv", row.names = FALSE)
+
+set.seed(123)
+rubella_split <- sample(c(TRUE, FALSE), nrow(rubella_data), replace=TRUE, prob=c(0.8,0.2))
+rubella_train <- rubella_data[rubella_split, ]
+rubella_test <- rubella_data[!rubella_split, ]
+
+rubella_model <- lm(cases ~ year + coverage_1st_dose,
+                    data = rubella_train)
+
+rubella_preds <- predict(rubella_model, newdata = rubella_test)
+
+rubella_test_results <- rubella_test %>%
+  mutate(predicted_cases = rubella_preds)
+
+summary(rubella_model)
+
+actual <- rubella_test_results$cases
+predicted <- rubella_test_results$predicted_cases
+
+mae(actual, predicted)
+rmse(actual, predicted)
+```
+
+-   Measles Model
+
+```{r}
+measles_data <- cases_vax_wide %>%
+  filter(disease == "Measles") %>%
+  drop_na(coverage_1st_dose, coverage_2nd_dose, cases)
+
+measles_data %<>% mutate(
+  below_herd_1st = if_else(coverage_1st_dose < 95, 1, 0),
+  below_herd_2nd = if_else(coverage_2nd_dose < 95, 1, 0),
+  under_herd_1st = pmax(95 - coverage_1st_dose, 0),
+  under_herd_2nd = pmax(95 - coverage_2nd_dose, 0))
+
+write.csv(measles_data, file = "measles_model_data.csv", row.names = FALSE)
+
+set.seed(123)
+measles_split <- sample(c(TRUE, FALSE), nrow(measles_data), replace=TRUE, prob=c(0.8,0.2))
+measles_train <- measles_data[measles_split, ]
+measles_test <- measles_data[!measles_split, ]
+
+measles_model <- lm(cases ~ coverage_1st_dose, 
+                    data = measles_train)
+
+measles_preds <- predict(measles_model, newdata = measles_test)
+
+measles_test_results <- measles_test %>%
+  mutate(predicted_cases = measles_preds)
+
+summary(measles_model)
+
+actual <- measles_test_results$cases
+predicted <- measles_test_results$predicted_cases
+
+mae(actual, predicted)
+rmse(actual, predicted)
+```

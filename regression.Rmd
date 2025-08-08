@@ -1,0 +1,256 @@
+---
+title: "Regression"
+author: "Madison Souder"
+date: "2025-07-19"
+output: html_document
+---
+
+-   Load Packages/Libraries
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(psych)
+library(magrittr)
+library(patchwork)
+library(scales)
+```
+
+-   Load Data
+
+```{r}
+WHO_vax <- read.csv("WHO_vaccination_rates.csv", check.names = FALSE)
+WHO_vax_1 <- read.csv("WHO_vaccination_1.csv", check.names = FALSE)
+WHO_vax_2 <- read.csv("WHO_vaccination_2.csv", check.names = FALSE)
+WHO_vax_3 <- read.csv("WHO_vaccination_3.csv", check.names = FALSE)
+
+cases <- read.csv("preventable_disease_cases.csv", check.names = FALSE)
+```
+
+
+#### **Step 4: Regression Analysis**
+
+-   Correlation between Vaccination rates and Reported Cases 
+
+I only used the data for the 1st dose. First I prepared the data.
+
+```{r}
+total_cases <- cases %>%
+  group_by(year) %>%
+  summarise(total_cases = sum(cases, na.rm = TRUE),
+            .groups = "drop")
+
+year_vax_1 <- WHO_vax_1 %>%
+  group_by(year, dose_type) %>%
+  summarize(Avg_Estimate = mean(coverage, na.rm = TRUE),
+           .groups = "drop")
+```
+
+Next, I created a data frame to join the two sets of data
+
+```{r}
+cases_vax <- year_vax_1 %>%
+  select(-dose_type) %>%
+  inner_join(total_cases, year_vax_1, by = "year")
+```
+
+
+```{r}
+cases_vax %>%
+  ggplot(aes(x = Avg_Estimate, y = total_cases)) +
+  geom_point() + geom_smooth(method = "lm", color = "blue")
+```
+
+The correlation here is not bad but this does not match the vaccine to the disease. I will map the diseases to the correct vaccine. To get an accurate regression correlation.
+
+*Correlation Vaccination Rates vs Reported Cases (Mapped)*
+
+First, I re-examined the unique dose types and diseases
+
+```{r}
+unique(year_vax_1$dose_type)
+
+unique(cases$disease)
+```
+
+I changed the name of the dose_types to make the graph easier to read
+
+```{r}
+year_vax_1_rename <- year_vax_1 %>%
+  mutate(dose_type = replace(
+    dose_type, dose_type == "DTP-containing vaccine, 1st dose", "DTP"))
+year_vax_1_rename %<>%
+  mutate(dose_type = replace(
+    dose_type, dose_type == "Measles-containing vaccine, 1st dose", 
+    "Measles-containing"))
+year_vax_1_rename %<>%
+  mutate(dose_type = replace(dose_type, 
+                             dose_type == "Rubella-containing vaccine, 1st dose",
+                             "Rubella-containing"))
+```
+
+Next, I created a "map" to match the disease to the correct vaccine
+
+```{r}
+disease_vaccine_map <- tibble(
+  disease = c("Diphtheria", "Total tetanus", "Pertussis", "Measles", "Rubella"),
+  dose_type = c("DTP", "DTP", "DTP", "Measles-containing", "Rubella-containing"))
+```
+
+I created a new dataframe to inner join the cases and vaccine compliance.
+
+```{r}
+cases_per_vax <- cases %>%
+  left_join(disease_vaccine_map, by = "disease")
+
+cases_per_vax <- inner_join(cases_per_vax, year_vax_1_rename, 
+                            by = c("year", "dose_type"))
+```
+
+*Saving the New Data Frame*
+
+```{r}
+write.csv(cases_per_vax, file = "regression_data.csv", row.names = FALSE)
+```
+
+Linear Regression and Correlation Graph
+
+```{r}
+cases_per_vax %>%
+  ggplot(aes(x = Avg_Estimate, y = cases, color = disease)) +
+  geom_point() + geom_smooth(method = "lm", color = "blue") +
+  labs(title = "Vaccine Preventable Disease Cases vs Vaccination Compliance",
+       x = "Vaccine Compliance (%)",
+       y = "Reported Cases",
+       color = "Disease") +
+  scale_color_manual(values = c("Diphtheria" = "maroon4",
+                                "Measles" = "darkgreen",
+                                "Rubella" = "green",
+                                "Pertussis" = "red",
+                                "Total tetanus" = "red4")) +
+  theme_light()
+```
+
+This is skewed because of the number of pertussis cases. Newborns are extremely specifiable to pertussis but the DTP vaccine can not be given until 2 months old.
+
+*Excluding Pertussis*
+
+```{r}
+no_pertussis <- cases_per_vax %>%
+  filter(disease != "Pertussis")
+
+no_pertussis %>%
+  ggplot(aes(x = Avg_Estimate, y = cases, color = disease)) +
+  geom_point() + geom_smooth(method = "lm", color = "blue") +
+  labs(title = "Vaccine Preventable Disease Cases vs Vaccination Compliance",
+       subtitle = "Excluding Pertussis",
+       x = "Vaccine Compliance (%)",
+       y = "Reported Cases",
+       color = "Disease") +
+  scale_color_manual(values = c("Diphtheria" = "red",
+                                "Measles" = "darkgreen",
+                                "Rubella" = "green",
+                                "Total tetanus" = "red4")) +
+  annotate("text", x = 95, y = 24000, colour = "black", 
+           label = "rho = -0.4217") +
+  annotate("text", x = 95, y = 22500, colour = "black", 
+           label = "p-value < 0.05") +
+  theme_light()
+```
+
+*Only Measles*
+
+I did this out of curiosity because measles has largest number of cases besides pertussis   
+
+```{r}
+measles_cases_vax <- cases_per_vax %>%
+  filter(disease == "Measles")
+
+measles_cases_vax %>%
+  ggplot(aes(x = Avg_Estimate, y = cases)) +
+  geom_point(color = "darkgreen") + 
+  geom_smooth(method = "lm", color = "blue") +
+  labs(title = "Measles Cases vs Measles-containing Vaccination Compliance",
+       x = "Vaccine Compliance (%)",
+       y = "Reported Cases") +
+  theme_light()
+```
+
+The correlation is not as strong but there are also less data point.
+
+-   Correlation Tests
+
+*All Cases/Vaccines*
+
+```{r}
+shapiro.test(cases_per_vax$cases)
+
+shapiro.test(cases_per_vax$Avg_Estimate)
+```
+Neither data is normal so a Spearman's rank correlation will be used.
+
+```{r}
+cor(cases_per_vax$Avg_Estimate, cases_per_vax$cases,  
+    method = "spearman", use = "pairwise.complete.obs" )
+```
+
+There is a very slight negative correlation.
+
+```{r}
+result_1 <- cor.test(cases_per_vax$Avg_Estimate, cases_per_vax$cases,  
+                   method = "spearman")
+
+print(result_1)
+```
+
+This relationship is not statistically significant.
+
+*Cases/Vaccine Correlation Test Excluding Pertussis*
+
+```{r}
+shapiro.test(no_pertussis$Avg_Estimate)
+
+shapiro.test(no_pertussis$cases)
+```
+
+Neither data is normal so a Spearman's rank correlation will be used.
+
+```{r}
+cor(no_pertussis$Avg_Estimate, no_pertussis$cases,  
+    method = "spearman", use = "pairwise.complete.obs")
+```
+
+There is a moderate negative correlation.
+
+```{r}
+result_2 <- cor.test(no_pertussis$Avg_Estimate, no_pertussis$cases,  
+                   method = "spearman")
+
+print(result_2)
+```
+
+The relationship is statistically significant. 
+
+*Only Measles*
+
+```{r}
+shapiro.test(measles_cases_vax$cases)
+
+shapiro.test(measles_cases_vax$Avg_Estimate)
+```
+
+Neither data is normal so a Spearman's rank correlation will be used.
+
+```{r}
+cor(measles_cases_vax$Avg_Estimate, measles_cases_vax$cases,  
+    method = "spearman", use = "pairwise.complete.obs")
+```
+
+There is an extreme slight negative correlation.
+
+```{r}
+result_3 <- cor.test(measles_cases_vax$Avg_Estimate, measles_cases_vax$cases, 
+                   method = "spearman")
+
+print(result_3)
+```
+The relationship is not statistically significant. 

@@ -1,0 +1,1194 @@
+---
+title: "practicum_data_cleaning"
+author: "Madison Souder"
+date: "2025-06-25"
+output:
+  pdf_document: default
+---
+
+-   Load Packages/Libraries
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(psych)
+library(magrittr)
+library(readxl)
+library(patchwork)
+library(scales)
+```
+
+-   Read in Data sets
+
+```{r}
+#Vaccination Data
+DTP <- read_excel("Diphtheria tetanus toxoid and pertussis (DTP) vaccination coverage 2025-21-06 13-15 UTC.xlsx")
+hep_B <- read_excel("Hepatitis B vaccination coverage 2025-21-06 23-50 UTC.xlsx")
+rubella <- read_excel("Rubella vaccination coverage 2025-21-06 23-50 UTC.xlsx")
+measles <- read_excel("Measles vaccination coverage 2025-21-06 23-46 UTC.xlsx")
+polio <- read_excel("Poliomyelitis vaccination coverage 2025-21-06 20-50 UTC.xlsx")
+```
+
+```{r}
+#Reported Cases
+D_cases <- read_excel("Diphtheria reported cases and incidence 2025-24-06 18-49 UTC.xlsx")
+T_cases <- read_excel("Tetanus reported cases and incidence 2025-24-06 18-54 UTC.xlsx")
+P_cases <- read_excel("Pertussis reported cases and incidence 2025-24-06 18-52 UTC.xlsx")
+rubella_cases <- read_excel("Rubella reported cases and incidence 2025-24-06 18-53 UTC.xlsx")
+measles_cases <- read_excel("Measles reported cases and incidence 2025-24-06 18-50 UTC.xlsx")
+mumps_cases <- read_excel("Mumps reported cases and incidence 2025-24-06 18-51 UTC.xlsx")
+```
+
+#### **Step 1: Examining the data + noting errors, outliers and NAs**
+
+This data would be easiest to work with if they were in two data frames, one for vaccinations compliance and one for cases
+
+**Vaccinations**
+
+-   DTP
+
+```{r}
+head(DTP)
+unique(DTP$ANTIGEN_DESCRIPTION)
+```
+
+-   Hep_B
+
+```{r}
+head(hep_B)
+unique(hep_B$ANTIGEN_DESCRIPTION)
+```
+
+-   Measles (**M**MR)
+
+```{r}
+head(measles)
+unique(measles$ANTIGEN_DESCRIPTION)
+```
+
+-   Polio
+
+```{r}
+head(polio)
+unique(polio$ANTIGEN_DESCRIPTION)
+```
+
+-   Rubella (MM**R**)
+
+```{r}
+head(rubella)
+unique(rubella$ANTIGEN_DESCRIPTION)
+```
+
+All these data sets have the same columns so they can be combined row-wise. Each also contains multiple doses, 1st, 2nd and 3rd which will be filtered out.
+
+```{r}
+WHO_vax <- rbind(DTP, hep_B, measles, polio, rubella)
+```
+
+**Reported Cases**
+
+-   Diphtheria
+
+```{r}
+head(D_cases)
+```
+
+-   Total tetanus
+
+```{r}
+head(T_cases)
+```
+
+-   Pertussis
+
+```{r}
+head(P_cases)
+```
+
+-   Measles
+
+```{r}
+head(measles_cases)
+```
+
+-   Mumps
+
+```{r}
+head(mumps_cases)
+```
+
+-   Rubella
+
+```{r}
+head(rubella_cases)
+```
+
+These data sets all have the same columns and can be combined row wise. The new data frame will need to be re-arranged so the years are not individual columns.
+
+```{r}
+cases <- rbind(D_cases, T_cases, P_cases, rubella_cases, measles_cases, 
+               mumps_cases)
+
+cases %<>%
+  pivot_longer(
+    cols = -c(`Country / Region`, Disease),
+    names_to = "year",
+    values_to = "cases")
+
+head(cases)
+```
+
+**Examining the New Data frames**
+
+```{r}
+glimpse(WHO_vax)
+sum(is.na(WHO_vax))
+summary(WHO_vax)
+```
+
+There are 1960 Na's and two of the columns are mostly NA's
+
+```{r}
+glimpse(cases)
+sum(is.na(cases))
+summary(cases)
+```
+
+There are 592 NA's. Also year and cases are not being read as numeric.
+
+*Vaccination Data*
+
+-   GROUP column
+
+```{r}
+unique(WHO_vax$GROUP)
+```
+
+There are three unique entries that are extras from exporting the data from the WHO website.
+
+-   CODE column
+
+```{r}
+unique(WHO_vax$CODE)
+```
+
+Only USA and NAs
+
+-   NAME column
+
+```{r}
+unique(WHO_vax$NAME)
+```
+
+Only United States of American and NAs
+
+-   YEAR column
+
+```{r}
+unique(WHO_vax$YEAR)
+```
+
+NAs present
+
+-   ANTIGEN column
+
+```{r}
+unique(WHO_vax$ANTIGEN)
+```
+
+Abbreviations for the specific antigen (vaccine) and NAs
+
+-   ANTIGEN_DESCRIPTION column
+
+```{r}
+unique(WHO_vax$ANTIGEN_DESCRIPTION)
+```
+
+The specific vaccine with their dose and NAs
+
+-   COVERAGE_CATEGORY column
+
+```{r}
+unique(WHO_vax$COVERAGE_CATEGORY)
+```
+
+Abbreviations for data collect source and NAs
+
+-   COVERAGE_DESCRIPTION column
+
+```{r}
+unique(WHO_vax$COVERAGE_CATEGORY_DESCRIPTION)
+```
+
+The data sources and NAs
+
+-   TARGET_NUMBER column
+
+```{r}
+unique(WHO_vax$TARGET_NUMBER)
+```
+
+NAs and zeros
+
+-   DOSES column
+
+```{r}
+unique(WHO_vax$DOSES)
+```
+
+NAs and zeros
+
+-   COVERAGE column
+
+```{r}
+unique(WHO_vax$COVERAGE)
+```
+
+The percent compliance and NAs.
+
+*Reported Cases*
+
+-   Country/Region column
+
+```{r}
+unique(cases$`Country / Region`)
+```
+
+This column also has left overs from exporting the data like the vaccination data does.
+
+-   Disease column
+
+```{r}
+unique(cases$Disease)
+```
+
+NAs present
+
+-   Year column
+
+```{r}
+unique(cases$year)
+class(cases$year)
+```
+
+Just the years, no NAs but this is classified as a character not numeric
+
+-   Cases column
+
+```{r}
+unique(cases$cases)
+class(cases$cases)
+```
+
+NAs present and this is entered as a character not numeric
+
+#### **Step 2: Cleaning the Data**
+
+**Vaccinations**
+
+-   Re-naming the columns
+
+```{r}
+WHO_vax %<>%
+  rename_with(tolower)
+
+colnames(WHO_vax)
+
+colnames(WHO_vax) <- c("region", "region_abbr", "location", "year", "antigen", 
+                       "dose_type", "estimation_category", "estimation_type", 
+                       "target_number", "doses", "coverage")
+```
+
+Re-naming them makes it easier to remember them and easier to type
+
+*Check*
+
+```{r}
+colnames(WHO_vax)
+```
+
+-   Dealing with the NAs and Removing the extra information
+
+*Region Column*
+
+```{r}
+WHO_vax %<>% filter(!str_starts(region, "Exported:"))
+```
+
+This was just extra information about when the data was exported.
+
+*Check*
+
+```{r}
+unique(WHO_vax$region)
+
+colSums(is.na(WHO_vax))
+```
+
+Removing the extra rows has removed the NAs except for in three columns
+
+*target_number and doses columns*
+
+They have the same number of NAs so it is likely they over lap. Each both have zeros as well.
+
+```{r}
+target_doses_na <- WHO_vax %>% 
+  filter(is.na(target_number)|(is.na(doses)))
+
+target_doses <- WHO_vax %>% 
+  filter((target_number == 0) | (doses == 0))
+
+target_doses_na
+target_doses
+```
+
+The zeros were clearly meant to be NAs so each column are only NAs and there for can be removed.
+
+```{r}
+WHO_vax %<>% select(-target_number, -doses)
+```
+
+*Check*
+
+```{r}
+glimpse(WHO_vax)
+```
+
+*Coverage column*
+
+```{r}
+sum(is.na(WHO_vax$coverage))
+```
+
+There are 244 NAs. This is the most important information so any NAs can be removed.
+
+```{r}
+WHO_vax %<>% filter(!is.na(coverage))
+```
+
+*Check*
+
+```{r}
+colSums(is.na(WHO_vax))
+```
+
+No more NAs present
+
+-   Separate the Doses in Data frames
+
+```{r}
+unique(WHO_vax$dose_type)
+```
+
+HepB includes the birth dose and birth dose total.
+
+```{r}
+WHO_vax %>%
+  filter(str_detect(dose_type, "birth dose total"))
+
+WHO_vax %>%
+  filter(dose_type == "HepB, birth dose (given within 24 hours of birth)")
+```
+
+The majority of the entries are under the standard birth dose. When the doses are put into separate data frames the 7 rows of birth dose total should be average with their corresponding standard birth dose.
+
+```{r}
+hep_birth_avg <- WHO_vax %>%
+  filter(str_detect(dose_type, "birth dose")) %>%
+  group_by(region, region_abbr, location, year, estimation_category,
+           estimation_type) %>%
+  summarise(coverage = mean(coverage, na.rm = TRUE),
+            dose_type = "HepB, birth dose",
+            antigen = "HEPB_BD",
+            .groups = "drop")
+```
+
+Seeing where the columns are
+
+```{r}
+hep_birth_avg 
+```
+
+Re-arranging the columns
+
+```{r}
+hep_birth_avg %<>% 
+  relocate(dose_type, .before = 5)
+hep_birth_avg %<>%
+  relocate(antigen, .before = 5)
+```
+
+*Check*
+
+```{r}
+hep_birth_avg 
+```
+
+Now when I filter out the 1st dose, I can add this in later. I will also add this into the original WHO_vax data frame.
+
+```{r}
+WHO_vax %<>% filter(!str_starts(dose_type, "HepB, birth dose"))
+
+WHO_vax %<>% bind_rows(hep_birth_avg)
+```
+
+*Check*
+
+```{r}
+unique(WHO_vax$dose_type)
+
+unique(WHO_vax$antigen)
+```
+
+*1st Dose data frame*
+
+```{r}
+WHO_vax_1 <- WHO_vax %>%
+  filter(str_detect(dose_type, "1st dose"))
+
+WHO_vax_1 %<>%
+  bind_rows(hep_birth_avg)
+```
+
+I found it easier to add this, this way because it is labeled as birth dose not 1st dose
+
+*Check*
+
+```{r}
+glimpse(WHO_vax_1)
+
+unique(WHO_vax_1$dose_type)
+```
+
+*2nd Dose data frame*
+
+```{r}
+WHO_vax_2 <- WHO_vax %>%
+  filter(str_detect(dose_type, "2nd dose"))
+```
+
+*Check*
+
+```{r}
+unique(WHO_vax_2$dose_type)
+```
+
+*3rd Dose Data-frame*
+
+```{r}
+WHO_vax_3 <- WHO_vax %>%
+  filter(str_detect(dose_type, "3rd dose"))
+```
+
+*Check*
+
+```{r}
+unique(WHO_vax_3$dose_type)
+```
+
+**Reported Cases**
+
+-   Re-naming the columns
+
+```{r}
+cases%<>%
+  rename_with(tolower)
+```
+
+*Check*
+
+```{r}
+colnames(cases)
+```
+
+Lower case is easier to deal with
+
+-   Dealing with the NAs and Removing the extra information
+
+*country / region column*
+
+```{r}
+cases %<>% 
+  filter(!str_starts(`country / region`, "Exported:"))
+```
+
+Extra information from when I exported the data
+
+*Check*
+
+```{r}
+unique(cases$`country / region`)
+
+sum(is.na(cases))
+```
+
+There are 52 NAs left. These NAs will be left as the could indicate that there was zero cases of that disease that year. Because I can not tell if that is 100% true, I will not change them to zeros.
+
+-   Fixing Data types
+
+```{r}
+cases %<>%
+  mutate(
+    cases = gsub(",", "", cases),
+    cases = na_if(cases, "NA"),
+    cases = as.numeric(cases))
+
+cases %<>%
+  mutate(year= as.numeric(year))
+```
+
+This removed the commas in the number of cases and then changed to data type to numeric
+
+*Check*
+
+```{r}
+class(cases$year)
+class(cases$cases)
+```
+
+**Saving Cleaned Data-sets**
+
+```{r}
+write.csv(cases, file = "preventable_disease_cases.csv", row.names = FALSE)
+
+write.csv(WHO_vax, file = "WHO_vaccination_rates.csv", row.names = FALSE)
+
+write.csv(WHO_vax_1, file = "WHO_vaccination_1.csv", row.names = FALSE)
+
+write.csv(WHO_vax_2, file = "WHO_vaccination_2.csv", row.names = FALSE)
+
+write.csv(WHO_vax_3, file = "WHO_vaccination_3.csv", row.names = FALSE)
+```
+
+#### **Step 3: Data Analysis**
+
+-   Coverage Data Examination
+
+*1st Dose*
+
+```{r}
+describe(WHO_vax_1$coverage)
+WHO_vax_1 %>%
+  ggplot(aes(x = coverage)) +
+  geom_boxplot()
+```
+
+The data is negatively skewed with many extreme outliers.
+
+*2nd Dose*
+
+```{r}
+describe(WHO_vax_2$coverage)
+WHO_vax_2 %>%
+  ggplot(aes(x = coverage)) +
+  geom_boxplot()
+```
+
+The data is negatively skewed two two outliers.
+
+*3rd Dose*
+
+```{r}
+describe(WHO_vax_3$coverage)
+WHO_vax_3 %>%
+  ggplot(aes(x = coverage)) +
+  geom_boxplot()
+```
+
+The data is negatively skewed with eleven extreme outliers.
+
+-   Change in Vaccination Compliance
+
+*1st Dose*
+
+```{r}
+year_1 <- WHO_vax_1 %>%
+  group_by(year) %>%
+  summarize(Avg_Estimate = mean(coverage, na.rm = TRUE))
+```
+
+This tbl holds the average vaccination coverage by vaccine (1st dose only) and year.
+
+```{r}
+describe(year_1$Avg_Estimate)
+year_1 %>% 
+  ggplot(aes(x = Avg_Estimate)) + 
+  geom_boxplot()
+```
+
+The data is slightly negatively skewed with one outlier.
+
+```{r}
+year_1 %>%
+  ggplot(aes(x = year, y = Avg_Estimate)) +
+  geom_point(color = "red",
+             size = 2) +
+  geom_line(size = .5) +
+  labs(title = "Total Vaccination Compliance (1st Dose Only)",
+       x = "Year",
+       y = "Compliance (%)") +
+  scale_x_continuous(limits = c(1980, 2023),
+                     breaks = seq(1980, 2023, by = 5)) +
+    scale_y_continuous(limits = c(70, 100),
+                     breaks = seq(70, 100, by = 5)) +
+  theme_bw()
+```
+
+The variation in compliance is extensive. Why are there four large dips? Is it lack of compliance or just missing information?
+
+*2nd Dose*
+
+```{r}
+year_2 <- WHO_vax_2 %>%
+  group_by(year) %>%
+  summarize(Avg_Estimate = mean(coverage, na.rm = TRUE))
+```
+
+This tbl holds the average vaccination coverage by vaccine (2nd Dose only) and year.
+
+```{r}
+describe(year_2$Avg_Estimate)
+
+year_2 %>% 
+  ggplot(aes(x = Avg_Estimate)) + 
+  geom_boxplot()
+```
+
+The data is negatively skewed with two outliers.
+
+```{r}
+year_2 %>%
+  ggplot(aes(x = year, y = Avg_Estimate)) +
+  geom_point(color = "red",
+             size = 2) +
+  geom_line(size = .5) +
+  labs(title = "Total Vaccination Compliance (2nd Dose Only)",
+       x = "Year",
+       y = "Compliance (%)") +
+  scale_x_continuous(limits = c(1995, 2023),
+                     breaks = seq(1995, 2023, by = 5)) +
+    scale_y_continuous(limits = c(65, 100),
+                     breaks = seq(65, 100, by = 5)) +
+  theme_bw()
+```
+
+This data has a positive up-ward trend.
+
+*3rd Dose*
+
+```{r}
+year_3 <- WHO_vax_3 %>%
+  group_by(year) %>%
+  summarize(Avg_Estimate = mean(coverage, na.rm = TRUE))
+```
+
+This tbl holds the average vaccination coverage by vaccine (3rd Dose only) and year.
+
+```{r}
+describe(year_3$Avg_Estimate)
+
+year_3 %>% 
+  ggplot(aes(x = Avg_Estimate)) + 
+  geom_boxplot()
+```
+
+The data is negatively skewed with 6 outliers.
+
+```{r}
+year_3 %>%
+  ggplot(aes(x = year, y = Avg_Estimate)) +
+  geom_point(color = "red",
+             size = 2) +
+  geom_line(size = .5) +
+  labs(title = "Total Vaccination Compliance (3rd Dose Only)",
+       x = "Year",
+       y = "Compliance (%)") +
+  scale_x_continuous(limits = c(1980, 2023),
+                     breaks = seq(1980, 2023, by = 5)) +
+    scale_y_continuous(limits = c(60, 100),
+                     breaks = seq(60, 100, by = 5)) +
+  theme_bw()
+```
+
+The variation in compliance is extensive. Why are there three large dips? Is it lack of compliance or just missing information?
+
+-   Compliance By Vaccine
+
+*1st Dose*
+
+```{r}
+year_vax_1 <- WHO_vax_1 %>%
+  group_by(year, dose_type) %>%
+  summarize(Avg_Estimate = mean(coverage, na.rm = TRUE),
+           .groups = "drop")
+```
+
+```{r}
+describe(year_vax_1$Avg_Estimate)
+year_vax_1 %>% 
+  ggplot(aes(x = Avg_Estimate)) + 
+  geom_boxplot()
+```
+
+This data is skewed with many extreme outliers.
+
+```{r}
+year_vax_1 %>%
+  ggplot(aes(x = year, y = Avg_Estimate, color = dose_type)) +
+  geom_point() +
+  geom_line()
+```
+
+The compliance of the DTP vaccine has stayed constant. The measles and rubella vaccine are consistent with each other because most come in the same vaccine (MMR). The rubella and measles vaccines does have large dips which can be what skewed the total average. The birth dose of the HepB vaccine was introduced in 1991
+
+*2nd Dose*
+
+```{r}
+year_vax_2 <- WHO_vax_2 %>%
+  group_by(year, antigen) %>%
+  summarize(Avg_Estimate = mean(coverage, na.rm = TRUE),
+            .groups = "drop")
+```
+
+```{r}
+describe(year_vax_2$Avg_Estimate)
+year_vax_2 %>% 
+  ggplot(aes(x = Avg_Estimate)) + 
+  geom_boxplot()
+```
+
+The data is negatively skewed with two outliers.
+
+```{r}
+year_vax_2 %>%
+  ggplot(aes(x = year, y = Avg_Estimate, color = antigen)) +
+  geom_point() +
+  geom_line()
+```
+
+The 2nd dose of the measles vaccine has a positive upward trend while the 2nd dose of the polio vaccine has very little data.
+
+*3rd Dose*
+
+```{r}
+year_vax_3 <- WHO_vax_3 %>%
+  group_by(year, antigen) %>%
+  summarize(Avg_Estimate = mean(coverage, na.rm = TRUE),
+            .groups = "drop")
+```
+
+```{r}
+describe(year_vax_3$Avg_Estimate)
+year_vax_3 %>% 
+  ggplot(aes(x = Avg_Estimate)) + 
+  geom_boxplot()
+```
+
+This data is very negatively skewed with multiple extreme outiers.
+
+```{r}
+year_vax_3 %>%
+  ggplot(aes(x = year, y = Avg_Estimate, color = antigen)) +
+  geom_point() +
+  geom_line()
+```
+
+The 3rd dose of DTP vaccine has stayed above 90% compliance except for 1991. The 3rd dose of the polio vaccine had a massive dip in 1987 and another dip in 1991. The 3rd dose of the hep B vaccine has a positive trend.
+
+-   All-Ages vs Kindergarten Vaccination Rates
+
+*Compliance by Vaccine*
+
+```{r}
+kid_vax <- read_csv("All_Vaccination_Data.csv")
+
+type_comp <- kid_vax %>%
+  filter(`Vaccine/Exemption` != "Exemption") %>%
+  filter(`Geography Type` != "U.S. Median") %>%
+  group_by(`School Year`, `Vaccine/Exemption`) %>% 
+  summarize(
+    Avg_Estimate = mean(`Estimate (%)`, na.rm = TRUE),
+    .groups = "drop")
+```
+
+This data was taken from the old data exploration project.
+
+```{r}
+k_plot <- type_comp %>% 
+  mutate(`School Year` = factor(`School Year`,  
+                                levels = unique(`School Year`))) %>% 
+  ggplot() + 
+  geom_point(mapping = aes(x = `School Year`, 
+                           y = Avg_Estimate,  
+                           color = `Vaccine/Exemption`)) + 
+  geom_line(mapping = aes(x = `School Year`, 
+                          y = Avg_Estimate,  
+                          group = `Vaccine/Exemption`, 
+                          color = `Vaccine/Exemption`)) + 
+  labs(title = "Kindergarten Vaccination Compliance by Vaccine", 
+       x = "School Year", 
+       y = "Compliance (%)", 
+       color = "Vaccine") + 
+  scale_color_manual(values = c(
+    "DTP, DTaP, or DT" = "red",
+    "Hepatitis B" = "orange",
+    "MMR" = "forestgreen",
+    "Polio" = "dodgerblue",
+    "Varicella" = "purple")) +
+  theme_light() + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
+```
+
+I already had a plot of kindergarten vaccination rates by vaccine.
+
+```{r}
+vax_1_plot <- year_vax_1 %>%
+  filter(year >= 2009) %>%
+  ggplot(aes(x = year, y = Avg_Estimate, color = dose_type)) +
+  geom_point() +
+  geom_line() +
+  labs(title = "Total Vaccination Compliance by Vaccine (1st Dose)",
+       x = "Year",
+       y = "Compliance (%)",
+       color = "Vaccine") +
+  scale_color_manual(values = c(
+    "DTP-containing vaccine, 1st dose" = "red",
+    "HepB, birth dose" = "orange",
+    "Inactivated polio-containing vaccine, 1st dose" = "dodgerblue",
+    "Measles-containing vaccine, 1st dose" = "darkgreen",
+    "Rubella-containing vaccine, 1st dose" = "lightgreen"),
+    labels = c(
+      "DTP-containing vaccine, 1st dose" = "DTP",
+      "HepB, birth dose" = "Hepatitis B",
+      "Inactivated polio-containing vaccine, 1st dose" = "Polio",
+      "Measles-containing vaccine, 1st dose" = "Measles-containing",
+      "Rubella-containing vaccine, 1st dose" = "Rubella-containing"
+    )) +
+  scale_x_continuous(
+    breaks = seq(2009, 2023, by = 2)) +
+  theme_light() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+vax_2_plot <- year_vax_2 %>%
+  filter(year >= 2009) %>%
+  ggplot(aes(x = year, y = Avg_Estimate, color = antigen)) +
+  geom_point() +
+  geom_line() +
+  labs(title = "Total Vaccination Compliance by Vaccine (2nd Dose)",
+       x = "Year",
+       y = "Complaicne (%)",
+       color = "Vaccine") +
+  scale_color_manual(values = c("IPV2" = "dodgerblue",
+                                "MCV2" = "darkgreen"),
+                     labels = c("IPV2"= "Polio",
+                                "MCV2" = "Measles-containing")) +
+  scale_x_continuous(
+    breaks = seq(2009, 2023, by = 2)) +
+  theme_light() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+vax_3_plot <- year_vax_3 %>%
+  filter(year >= 2009) %>%
+  ggplot(aes(x = year, y = Avg_Estimate, color = antigen)) +
+  geom_point() +
+  geom_line() +
+  labs(title = "Total Vaccination Compliance by Vaccine (3rd Dose)",
+       x = "Year",
+       y = "Compliance (%)",
+       color = "Vaccine") +
+  scale_color_manual(values = c("DTPCV3" = "red",
+                                "HEPB3" = "orange",
+                                "POL3" = "dodgerblue"),
+                     labels = c("DTPCV3" = "DTP",
+                                "HEPB3" = "Hepatitis B",
+                                "POL3" = "Polio")) +
+  scale_x_continuous(
+    breaks = seq(2009, 2023, by = 2)) +
+  theme_light() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+Refined version of the previous plots but limited to the year 2009 to 2023. This allows it to line up with the kindergarten data.
+
+```{r}
+(k_plot | vax_1_plot) / (vax_2_plot | vax_3_plot)
+```
+
+One more with just the Total Compliance of 1st, 2nd, and 3rd Dose
+
+```{r}
+vax_1_plot_new <- year_vax_1 %>%
+  ggplot(aes(x = year, y = Avg_Estimate, color = dose_type)) +
+  geom_point() +
+  geom_line() +
+  labs(title = "Total Vaccination Compliance by Vaccine (1st Dose)",
+       x = "Year",
+       y = "Compliance (%)",
+       color = "Vaccine") +
+  scale_color_manual(values = c(
+    "DTP-containing vaccine, 1st dose" = "red",
+    "HepB, birth dose" = "orange",
+    "Inactivated polio-containing vaccine, 1st dose" = "dodgerblue",
+    "Measles-containing vaccine, 1st dose" = "darkgreen",
+    "Rubella-containing vaccine, 1st dose" = "lightgreen"),
+    labels = c(
+      "DTP-containing vaccine, 1st dose" = "DTP",
+      "HepB, birth dose" = "Hepatitis B",
+      "Inactivated polio-containing vaccine, 1st dose" = "Polio",
+      "Measles-containing vaccine, 1st dose" = "Measles-containing",
+      "Rubella-containing vaccine, 1st dose" = "Rubella-containing"
+    )) +
+  theme_light() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+vax_2_plot_new <- year_vax_2 %>%
+  ggplot(aes(x = year, y = Avg_Estimate, color = antigen)) +
+  geom_point() +
+  geom_line() +
+  labs(title = "Total Vaccination Compliance by Vaccine (2nd Dose)",
+       x = "Year",
+       y = "Complaicne (%)",
+       color = "Vaccine") +
+  scale_color_manual(values = c("IPV2" = "dodgerblue",
+                                "MCV2" = "darkgreen"),
+                     labels = c("IPV2"= "Polio",
+                                "MCV2" = "Measles-containing")) +
+  theme_light() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+vax_3_plot_new <- year_vax_3 %>%
+  ggplot(aes(x = year, y = Avg_Estimate, color = antigen)) +
+  geom_point() +
+  geom_line() +
+  labs(title = "Total Vaccination Compliance by Vaccine (3rd Dose)",
+       x = "Year",
+       y = "Compliance (%)",
+       color = "Vaccine") +
+  scale_color_manual(values = c("DTPCV3" = "red",
+                                "HEPB3" = "orange",
+                                "POL3" = "dodgerblue"),
+                     labels = c("DTPCV3" = "DTP",
+                                "HEPB3" = "Hepatitis B",
+                                "POL3" = "Polio")) +
+  theme_light() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+vax_1_plot_new
+vax_2_plot_new / vax_3_plot_new
+```
+
+-   Reported Cases
+
+*Diphtheria*
+
+```{r}
+cases %>%
+  filter(disease == "Diphtheria") %>%
+  pull(cases) %>%
+  describe()
+
+cases %>%
+  filter(disease == "Diphtheria") %>%
+  ggplot(aes(y = cases)) + geom_boxplot()
+```
+
+The data is positively skewed with no outliers.
+
+*Tetanus*
+
+```{r}
+cases %>%
+  filter(disease == "Total tetanus") %>%
+  pull(cases) %>%
+  describe()
+
+cases %>%
+  filter(disease == "Total tetanus") %>%
+  ggplot(aes(y = cases)) + geom_boxplot()
+```
+
+The data is slightly postively skewed with two outliers.
+
+*Pertussis*
+
+```{r}
+cases %>%
+  filter(disease == "Pertussis") %>%
+  pull(cases) %>%
+  describe()
+
+cases %>%
+  filter(disease == "Pertussis") %>%
+  ggplot(aes(y = cases)) + geom_boxplot()
+```
+
+The data is postively skewed with one outlier.
+
+*Rubella*
+
+```{r}
+cases %>%
+  filter(disease == "Rubella") %>%
+  pull(cases) %>%
+  describe()
+
+cases %>%
+  filter(disease == "Rubella") %>%
+  ggplot(aes(y = cases)) + geom_boxplot()
+```
+
+The data is positively skewed with four outliers.
+
+*Measles*
+
+```{r}
+cases %>%
+  filter(disease == "Measles") %>%
+  pull(cases) %>%
+  describe()
+
+cases %>%
+  filter(disease == "Measles") %>%
+  ggplot(aes(y = cases)) + geom_boxplot()
+```
+
+The data is very positively skewed with five outliers.
+
+*Mumps*
+
+```{r}
+cases %>%
+  filter(disease == "Mumps") %>%
+  pull(cases) %>%
+  describe()
+
+cases %>%
+  filter(disease == "Mumps") %>%
+  ggplot(aes(y = cases)) + geom_boxplot()
+```
+
+The data is positively skewed with two outliers.
+
+-   Kindergarten Vaccination Rates vs Reported Cases
+
+```{r}
+cases_plot <- cases %>%
+  filter(year >= 2009) %>%
+  filter(!is.na(cases)) %>%
+  ggplot() +
+  geom_point(mapping = aes(x = year,
+                           y = cases,
+                           color = disease)) +
+  geom_line(mapping = aes(x = year,
+                          y = cases,
+                          group = disease,
+                          color = disease)) +
+  labs(title = "Reported Cases of Vaccine Preventable Disease",
+       x = "Year",
+       y = "Reported Cases",
+       color = "Disease") +
+  scale_color_manual(values = c("Diphtheria" = "maroon4",
+                                "Measles" = "green",
+                                "Mumps" = "darkgreen",
+                                "Rubella" = "aquamarine4",
+                                "Pertussis" = "red",
+                                "Total tetanus" = "red4")) +
+  scale_x_continuous(breaks = seq(2009, 2023, by = 2)) +
+  theme_light() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+mmr_plot <- cases %>%
+  filter(!disease %in% c("Pertussis", "Diphtheria", "Total tetanus")) %>%
+  filter(year >= 2009) %>%
+  filter(!is.na(cases)) %>%
+  ggplot() +
+  geom_point(mapping = aes(x = year,
+                           y = cases,
+                           color = disease)) +
+  geom_line(mapping = aes(x = year,
+                          y = cases,
+                          group = disease,
+                          color = disease)) +
+  labs(title = "Reported Cases of Vaccine Preventable Diseases",
+       subtitle = "Only Measles, Mumps and Rubella",
+       x = "Year",
+       y = "Reported Cases",
+       color = "Disease") +
+   scale_color_manual(values = c("Diphtheria" = "maroon4",
+                                 "Total tetanus" = "red4",
+                                 "Measles" = "green",
+                                 "Mumps" = "darkgreen",
+                                 "Rubella" = "aquamarine4")) +
+  scale_x_continuous (breaks = seq(2009, 2023, by = 2)) +
+  theme_light() + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+(k_plot| vax_1_plot) / (cases_plot | mmr_plot)
+```
+
+```{r}
+cases %>%
+  filter(disease == "Diphtheria") %>%
+  summarise(total_cases = sum(cases, na.rm = TRUE))
+
+cases %>%
+  filter(disease == "Total tetanus") %>%
+  summarise(total_cases = sum(cases, na.rm = TRUE))
+
+cases %>%
+  filter(disease == "Pertussis") %>%
+  summarise(total_cases = sum(cases, na.rm = TRUE))
+```
+
+*Only Reported Cases*
+
+```{r}
+cases_plot_new <- cases %>%
+  filter(!is.na(cases)) %>%
+  ggplot() +
+  geom_point(mapping = aes(x = year,
+                           y = cases,
+                           color = disease)) +
+  geom_line(mapping = aes(x = year,
+                          y = cases,
+                          group = disease,
+                          color = disease)) +
+  labs(title = "Reported Cases of Vaccine Preventable Disease",
+       x = "Year",
+       y = "Reported Cases",
+       color = "Disease") +
+  scale_color_manual(values = c("Diphtheria" = "maroon4",
+                                "Measles" = "green",
+                                "Mumps" = "darkgreen",
+                                "Rubella" = "aquamarine4",
+                                "Pertussis" = "red",
+                                "Total tetanus" = "red4")) +
+  theme_light() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+mmr_plot_new <- cases %>%
+  filter(!is.na(cases)) %>%
+  filter(!disease %in% c("Pertussis", "Diphtheria", "Total tetanus")) %>%
+  ggplot() +
+  geom_point(mapping = aes(x = year,
+                           y = cases,
+                           color = disease)) +
+  geom_line(mapping = aes(x = year,
+                          y = cases,
+                          group = disease,
+                          color = disease)) +
+  labs(title = "Reported Cases of Vaccine Preventable Diseases",
+       subtitle = "Only Measles, Mumps and Rubella",
+       x = "Year",
+       y = "Reported Cases",
+       color = "Disease") +
+   scale_color_manual(values = c("Diphtheria" = "maroon4",
+                                 "Total tetanus" = "red4",
+                                 "Measles" = "green",
+                                 "Mumps" = "darkgreen",
+                                 "Rubella" = "aquamarine4")) +
+  theme_light() + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+cases_plot_new | mmr_plot_new
+```
