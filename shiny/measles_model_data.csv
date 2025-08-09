@@ -1,0 +1,27 @@
+"disease","year","cases","dose_type","coverage_1st_dose","coverage_3rd_dose","coverage_2nd_dose","below_herd_1st","below_herd_2nd","under_herd_1st","under_herd_2nd"
+"Measles",2023,121,"Measles-containing vaccine",92,NA,95,1,0,3,0
+"Measles",2021,14,"Measles-containing vaccine",91.8,NA,95,1,0,3.2,0
+"Measles",2020,1275,"Measles-containing vaccine",90.85,NA,95,1,0,4.15000000000001,0
+"Measles",2018,375,"Measles-containing vaccine",91.75,NA,94.15,1,1,3.25,0.849999999999994
+"Measles",2017,120,"Measles-containing vaccine",91,NA,94,1,1,4,1
+"Measles",2016,85,"Measles-containing vaccine",91.95,NA,94,1,1,3.05,1
+"Measles",2015,188,"Measles-containing vaccine",91.75,NA,93,1,1,3.25,2
+"Measles",2014,667,"Measles-containing vaccine",92,NA,92,1,1,3,3
+"Measles",2013,187,"Measles-containing vaccine",92,NA,91,1,1,3,4
+"Measles",2012,55,"Measles-containing vaccine",91,NA,91,1,1,4,4
+"Measles",2011,220,"Measles-containing vaccine",91.75,NA,90,1,1,3.25,5
+"Measles",2010,63,"Measles-containing vaccine",91.1,NA,89,1,1,3.90000000000001,6
+"Measles",2009,71,"Measles-containing vaccine",90,NA,87.85,1,1,5,7.15000000000001
+"Measles",2008,140,"Measles-containing vaccine",92,NA,87,1,1,3,8
+"Measles",2007,43,"Measles-containing vaccine",92,NA,85.85,1,1,3,9.15000000000001
+"Measles",2006,55,"Measles-containing vaccine",92,NA,86,1,1,3,9
+"Measles",2005,66,"Measles-containing vaccine",92,NA,86.15,1,1,3,8.84999999999999
+"Measles",2004,37,"Measles-containing vaccine",93,NA,86.05,1,1,2,8.95
+"Measles",2003,56,"Measles-containing vaccine",92.8,NA,86,1,1,2.2,9
+"Measles",2002,41,"Measles-containing vaccine",91.15,NA,86,1,1,3.84999999999999,9
+"Measles",2001,116,"Measles-containing vaccine",91,NA,85.85,1,1,4,9.15000000000001
+"Measles",2000,85,"Measles-containing vaccine",91,NA,84.85,1,1,4,10.15
+"Measles",1999,100,"Measles-containing vaccine",91.8333333333333,NA,80.7,1,1,3.16666666666667,14.3
+"Measles",1998,100,"Measles-containing vaccine",92,NA,76.9,1,1,3,18.1
+"Measles",1997,138,"Measles-containing vaccine",91,NA,71.6,1,1,4,23.4
+"Measles",1996,489,"Measles-containing vaccine",91,NA,68,1,1,4,27

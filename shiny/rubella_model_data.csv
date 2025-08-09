@@ -1,0 +1,26 @@
+"disease","year","cases","dose_type","coverage_1st_dose","coverage_3rd_dose","coverage_2nd_dose","below_herd_1st","under_herd_1st"
+"Rubella",2023,7,"Rubella-containing vaccine",92,NA,NA,0,0
+"Rubella",2021,7,"Rubella-containing vaccine",91.8,NA,NA,0,0
+"Rubella",2020,6,"Rubella-containing vaccine",90.85,NA,NA,0,0
+"Rubella",2018,4,"Rubella-containing vaccine",91.75,NA,NA,0,0
+"Rubella",2017,7,"Rubella-containing vaccine",91,NA,NA,0,0
+"Rubella",2016,1,"Rubella-containing vaccine",91.95,NA,NA,0,0
+"Rubella",2015,5,"Rubella-containing vaccine",91.75,NA,NA,0,0
+"Rubella",2014,6,"Rubella-containing vaccine",92,NA,NA,0,0
+"Rubella",2013,9,"Rubella-containing vaccine",91.4,NA,NA,0,0
+"Rubella",2012,9,"Rubella-containing vaccine",91,NA,NA,0,0
+"Rubella",2011,4,"Rubella-containing vaccine",92,NA,NA,0,0
+"Rubella",2010,5,"Rubella-containing vaccine",91.1,NA,NA,0,0
+"Rubella",2009,3,"Rubella-containing vaccine",90,NA,NA,0,0
+"Rubella",2008,16,"Rubella-containing vaccine",92,NA,NA,0,0
+"Rubella",2007,12,"Rubella-containing vaccine",92,NA,NA,0,0
+"Rubella",2006,11,"Rubella-containing vaccine",92,NA,NA,0,0
+"Rubella",2005,11,"Rubella-containing vaccine",92,NA,NA,0,0
+"Rubella",2004,10,"Rubella-containing vaccine",93,NA,NA,0,0
+"Rubella",2003,7,"Rubella-containing vaccine",93,NA,NA,0,0
+"Rubella",2002,18,"Rubella-containing vaccine",91,NA,NA,0,0
+"Rubella",2001,23,"Rubella-containing vaccine",91,NA,NA,0,0
+"Rubella",2000,176,"Rubella-containing vaccine",91,NA,NA,0,0
+"Rubella",1999,267,"Rubella-containing vaccine",92,NA,NA,0,0
+"Rubella",1998,364,"Rubella-containing vaccine",92,NA,NA,0,0
+"Rubella",1997,181,"Rubella-containing vaccine",91,NA,NA,0,0

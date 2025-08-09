@@ -1,0 +1,221 @@
+"country / region","disease","year","cases","dose_type","Avg_Estimate"
+"United States of America","Diphtheria",2023,1,"DTP",98
+"United States of America","Diphtheria",2022,0,"DTP",97.8
+"United States of America","Diphtheria",2021,1,"DTP",97.05
+"United States of America","Diphtheria",2020,2,"DTP",96.85
+"United States of America","Diphtheria",2019,NA,"DTP",97.05
+"United States of America","Diphtheria",2018,0,"DTP",97.05
+"United States of America","Diphtheria",2017,0,"DTP",97
+"United States of America","Diphtheria",2016,0,"DTP",97.85
+"United States of America","Diphtheria",2015,0,"DTP",97.9
+"United States of America","Diphtheria",2014,1,"DTP",98
+"United States of America","Diphtheria",2013,0,"DTP",97.75
+"United States of America","Diphtheria",2012,1,"DTP",97
+"United States of America","Diphtheria",2011,0,"DTP",98
+"United States of America","Diphtheria",2010,0,"DTP",97.85
+"United States of America","Diphtheria",2009,0,"DTP",98
+"United States of America","Diphtheria",2008,0,"DTP",99
+"United States of America","Diphtheria",2007,0,"DTP",98.5
+"United States of America","Diphtheria",2006,0,"DTP",99
+"United States of America","Diphtheria",2005,0,"DTP",99
+"United States of America","Diphtheria",2004,0,"DTP",99
+"United States of America","Diphtheria",2003,1,"DTP",99.1
+"United States of America","Diphtheria",2002,0,"DTP",97.2
+"United States of America","Diphtheria",2001,1,"DTP",98
+"United States of America","Diphtheria",2000,2,"DTP",99.495
+"United States of America","Diphtheria",1999,1,"DTP",99
+"United States of America","Diphtheria",1998,1,"DTP",98
+"United States of America","Diphtheria",1997,5,"DTP",98
+"United States of America","Diphtheria",1996,2,"DTP",98
+"United States of America","Diphtheria",1995,0,"DTP",98
+"United States of America","Diphtheria",1994,2,"DTP",97
+"United States of America","Diphtheria",1993,0,"DTP",96
+"United States of America","Diphtheria",1992,4,"DTP",94
+"United States of America","Diphtheria",1991,5,"DTP",95
+"United States of America","Diphtheria",1990,4,"DTP",96
+"United States of America","Diphtheria",1989,3,"DTP",97
+"United States of America","Diphtheria",1988,2,"DTP",98
+"United States of America","Diphtheria",1987,3,"DTP",98
+"United States of America","Diphtheria",1986,0,"DTP",98
+"United States of America","Diphtheria",1985,3,"DTP",98
+"United States of America","Diphtheria",1984,1,"DTP",98
+"United States of America","Diphtheria",1983,5,"DTP",98
+"United States of America","Diphtheria",1982,2,"DTP",98
+"United States of America","Diphtheria",1981,5,"DTP",98
+"United States of America","Diphtheria",1980,3,"DTP",98
+"United States of America","Total tetanus",2023,27,"DTP",98
+"United States of America","Total tetanus",2022,28,"DTP",97.8
+"United States of America","Total tetanus",2021,17,"DTP",97.05
+"United States of America","Total tetanus",2020,26,"DTP",96.85
+"United States of America","Total tetanus",2019,0,"DTP",97.05
+"United States of America","Total tetanus",2018,0,"DTP",97.05
+"United States of America","Total tetanus",2017,33,"DTP",97
+"United States of America","Total tetanus",2016,34,"DTP",97.85
+"United States of America","Total tetanus",2015,30,"DTP",97.9
+"United States of America","Total tetanus",2014,25,"DTP",98
+"United States of America","Total tetanus",2013,26,"DTP",97.75
+"United States of America","Total tetanus",2012,37,"DTP",97
+"United States of America","Total tetanus",2011,37,"DTP",98
+"United States of America","Total tetanus",2010,26,"DTP",97.85
+"United States of America","Total tetanus",2009,18,"DTP",98
+"United States of America","Total tetanus",2008,19,"DTP",99
+"United States of America","Total tetanus",2007,28,"DTP",98.5
+"United States of America","Total tetanus",2006,41,"DTP",99
+"United States of America","Total tetanus",2005,27,"DTP",99
+"United States of America","Total tetanus",2004,34,"DTP",99
+"United States of America","Total tetanus",2003,20,"DTP",99.1
+"United States of America","Total tetanus",2002,25,"DTP",97.2
+"United States of America","Total tetanus",2001,38,"DTP",98
+"United States of America","Total tetanus",2000,35,"DTP",99.495
+"United States of America","Total tetanus",1999,32,"DTP",99
+"United States of America","Total tetanus",1998,34,"DTP",98
+"United States of America","Total tetanus",1997,42,"DTP",98
+"United States of America","Total tetanus",1996,NA,"DTP",98
+"United States of America","Total tetanus",1995,34,"DTP",98
+"United States of America","Total tetanus",1994,51,"DTP",97
+"United States of America","Total tetanus",1993,48,"DTP",96
+"United States of America","Total tetanus",1992,45,"DTP",94
+"United States of America","Total tetanus",1991,57,"DTP",95
+"United States of America","Total tetanus",1990,64,"DTP",96
+"United States of America","Total tetanus",1989,53,"DTP",97
+"United States of America","Total tetanus",1988,53,"DTP",98
+"United States of America","Total tetanus",1987,48,"DTP",98
+"United States of America","Total tetanus",1986,64,"DTP",98
+"United States of America","Total tetanus",1985,83,"DTP",98
+"United States of America","Total tetanus",1984,74,"DTP",98
+"United States of America","Total tetanus",1983,91,"DTP",98
+"United States of America","Total tetanus",1982,88,"DTP",98
+"United States of America","Total tetanus",1981,72,"DTP",98
+"United States of America","Total tetanus",1980,95,"DTP",98
+"United States of America","Pertussis",2023,3044,"DTP",98
+"United States of America","Pertussis",2022,2115,"DTP",97.8
+"United States of America","Pertussis",2021,6126,"DTP",97.05
+"United States of America","Pertussis",2020,18617,"DTP",96.85
+"United States of America","Pertussis",2019,NA,"DTP",97.05
+"United States of America","Pertussis",2018,15609,"DTP",97.05
+"United States of America","Pertussis",2017,18975,"DTP",97
+"United States of America","Pertussis",2016,17972,"DTP",97.85
+"United States of America","Pertussis",2015,20679,"DTP",97.9
+"United States of America","Pertussis",2014,32971,"DTP",98
+"United States of America","Pertussis",2013,28639,"DTP",97.75
+"United States of America","Pertussis",2012,48277,"DTP",97
+"United States of America","Pertussis",2011,18719,"DTP",98
+"United States of America","Pertussis",2010,27550,"DTP",97.85
+"United States of America","Pertussis",2009,0,"DTP",98
+"United States of America","Pertussis",2008,13213,"DTP",99
+"United States of America","Pertussis",2007,10454,"DTP",98.5
+"United States of America","Pertussis",2006,15632,"DTP",99
+"United States of America","Pertussis",2005,25616,"DTP",99
+"United States of America","Pertussis",2004,25827,"DTP",99
+"United States of America","Pertussis",2003,11647,"DTP",99.1
+"United States of America","Pertussis",2002,9771,"DTP",97.2
+"United States of America","Pertussis",2001,7580,"DTP",98
+"United States of America","Pertussis",2000,7867,"DTP",99.495
+"United States of America","Pertussis",1999,7288,"DTP",99
+"United States of America","Pertussis",1998,7405,"DTP",98
+"United States of America","Pertussis",1997,6564,"DTP",98
+"United States of America","Pertussis",1996,7796,"DTP",98
+"United States of America","Pertussis",1995,5137,"DTP",98
+"United States of America","Pertussis",1994,4617,"DTP",97
+"United States of America","Pertussis",1993,6586,"DTP",96
+"United States of America","Pertussis",1992,4083,"DTP",94
+"United States of America","Pertussis",1991,2719,"DTP",95
+"United States of America","Pertussis",1990,4570,"DTP",96
+"United States of America","Pertussis",1989,4157,"DTP",97
+"United States of America","Pertussis",1988,3450,"DTP",98
+"United States of America","Pertussis",1987,2823,"DTP",98
+"United States of America","Pertussis",1986,4195,"DTP",98
+"United States of America","Pertussis",1985,3589,"DTP",98
+"United States of America","Pertussis",1984,2276,"DTP",98
+"United States of America","Pertussis",1983,2463,"DTP",98
+"United States of America","Pertussis",1982,1895,"DTP",98
+"United States of America","Pertussis",1981,1248,"DTP",98
+"United States of America","Pertussis",1980,1730,"DTP",98
+"United States of America","Rubella",2023,7,"Rubella-containing",92
+"United States of America","Rubella",2022,NA,"Rubella-containing",91.8
+"United States of America","Rubella",2021,7,"Rubella-containing",91.8
+"United States of America","Rubella",2020,6,"Rubella-containing",90.85
+"United States of America","Rubella",2019,NA,"Rubella-containing",90.2
+"United States of America","Rubella",2018,4,"Rubella-containing",91.75
+"United States of America","Rubella",2017,7,"Rubella-containing",91
+"United States of America","Rubella",2016,1,"Rubella-containing",91.95
+"United States of America","Rubella",2015,5,"Rubella-containing",91.75
+"United States of America","Rubella",2014,6,"Rubella-containing",92
+"United States of America","Rubella",2013,9,"Rubella-containing",91.4
+"United States of America","Rubella",2012,9,"Rubella-containing",91
+"United States of America","Rubella",2011,4,"Rubella-containing",92
+"United States of America","Rubella",2010,5,"Rubella-containing",91.1
+"United States of America","Rubella",2009,3,"Rubella-containing",90
+"United States of America","Rubella",2008,16,"Rubella-containing",92
+"United States of America","Rubella",2007,12,"Rubella-containing",92
+"United States of America","Rubella",2006,11,"Rubella-containing",92
+"United States of America","Rubella",2005,11,"Rubella-containing",92
+"United States of America","Rubella",2004,10,"Rubella-containing",93
+"United States of America","Rubella",2003,7,"Rubella-containing",93
+"United States of America","Rubella",2002,18,"Rubella-containing",91
+"United States of America","Rubella",2001,23,"Rubella-containing",91
+"United States of America","Rubella",2000,176,"Rubella-containing",91
+"United States of America","Rubella",1999,267,"Rubella-containing",92
+"United States of America","Rubella",1998,364,"Rubella-containing",92
+"United States of America","Rubella",1997,181,"Rubella-containing",91
+"United States of America","Rubella",1996,NA,"Rubella-containing",91
+"United States of America","Rubella",1995,NA,"Rubella-containing",88
+"United States of America","Rubella",1994,NA,"Rubella-containing",89
+"United States of America","Rubella",1993,NA,"Rubella-containing",84
+"United States of America","Rubella",1992,NA,"Rubella-containing",83
+"United States of America","Rubella",1991,NA,"Rubella-containing",87
+"United States of America","Rubella",1990,NA,"Rubella-containing",90
+"United States of America","Rubella",1989,NA,"Rubella-containing",94
+"United States of America","Rubella",1988,NA,"Rubella-containing",98
+"United States of America","Rubella",1987,NA,"Rubella-containing",82
+"United States of America","Rubella",1986,NA,"Rubella-containing",97
+"United States of America","Rubella",1985,NA,"Rubella-containing",97
+"United States of America","Rubella",1984,NA,"Rubella-containing",98
+"United States of America","Rubella",1983,NA,"Rubella-containing",98
+"United States of America","Rubella",1982,NA,"Rubella-containing",97
+"United States of America","Rubella",1981,NA,"Rubella-containing",97
+"United States of America","Rubella",1980,NA,"Rubella-containing",86
+"United States of America","Measles",2023,121,"Measles-containing",92
+"United States of America","Measles",2022,NA,"Measles-containing",91.8
+"United States of America","Measles",2021,14,"Measles-containing",91.8
+"United States of America","Measles",2020,1275,"Measles-containing",90.85
+"United States of America","Measles",2019,NA,"Measles-containing",90.2
+"United States of America","Measles",2018,375,"Measles-containing",91.75
+"United States of America","Measles",2017,120,"Measles-containing",91
+"United States of America","Measles",2016,85,"Measles-containing",91.95
+"United States of America","Measles",2015,188,"Measles-containing",91.75
+"United States of America","Measles",2014,667,"Measles-containing",92
+"United States of America","Measles",2013,187,"Measles-containing",92
+"United States of America","Measles",2012,55,"Measles-containing",91
+"United States of America","Measles",2011,220,"Measles-containing",91.75
+"United States of America","Measles",2010,63,"Measles-containing",91.1
+"United States of America","Measles",2009,71,"Measles-containing",90
+"United States of America","Measles",2008,140,"Measles-containing",92
+"United States of America","Measles",2007,43,"Measles-containing",92
+"United States of America","Measles",2006,55,"Measles-containing",92
+"United States of America","Measles",2005,66,"Measles-containing",92
+"United States of America","Measles",2004,37,"Measles-containing",93
+"United States of America","Measles",2003,56,"Measles-containing",92.8
+"United States of America","Measles",2002,41,"Measles-containing",91.15
+"United States of America","Measles",2001,116,"Measles-containing",91
+"United States of America","Measles",2000,85,"Measles-containing",91
+"United States of America","Measles",1999,100,"Measles-containing",91.8333333333333
+"United States of America","Measles",1998,100,"Measles-containing",92
+"United States of America","Measles",1997,138,"Measles-containing",91
+"United States of America","Measles",1996,489,"Measles-containing",91
+"United States of America","Measles",1995,309,"Measles-containing",88
+"United States of America","Measles",1994,958,"Measles-containing",89
+"United States of America","Measles",1993,312,"Measles-containing",84
+"United States of America","Measles",1992,2231,"Measles-containing",83
+"United States of America","Measles",1991,9643,"Measles-containing",84.5
+"United States of America","Measles",1990,27786,"Measles-containing",90
+"United States of America","Measles",1989,18193,"Measles-containing",94
+"United States of America","Measles",1988,3396,"Measles-containing",98
+"United States of America","Measles",1987,3655,"Measles-containing",82
+"United States of America","Measles",1986,6282,"Measles-containing",97
+"United States of America","Measles",1985,2822,"Measles-containing",97
+"United States of America","Measles",1984,2587,"Measles-containing",98
+"United States of America","Measles",1983,1497,"Measles-containing",98
+"United States of America","Measles",1982,1714,"Measles-containing",97
+"United States of America","Measles",1981,3124,"Measles-containing",97
+"United States of America","Measles",1980,13506,"Measles-containing",86

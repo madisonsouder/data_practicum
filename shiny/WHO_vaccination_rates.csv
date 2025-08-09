@@ -1,0 +1,594 @@
+"region","region_abbr","location","year","antigen","dose_type","estimation_category","estimation_type","coverage"
+"COUNTRIES","USA","United States of America",2023,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",2023,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",2022,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",97.6
+"COUNTRIES","USA","United States of America",2022,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",94.2
+"COUNTRIES","USA","United States of America",2022,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",2022,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",2021,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",97.1
+"COUNTRIES","USA","United States of America",2021,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",93.7
+"COUNTRIES","USA","United States of America",2021,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",2021,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",2020,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",96.7
+"COUNTRIES","USA","United States of America",2020,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",93.3
+"COUNTRIES","USA","United States of America",2020,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",2020,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2019,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",97.1
+"COUNTRIES","USA","United States of America",2019,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",93.8
+"COUNTRIES","USA","United States of America",2019,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",2019,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",2018,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",97.1
+"COUNTRIES","USA","United States of America",2018,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",94
+"COUNTRIES","USA","United States of America",2018,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",2018,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",2017,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",94
+"COUNTRIES","USA","United States of America",2017,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",97
+"COUNTRIES","USA","United States of America",2017,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",2017,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",2016,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",95
+"COUNTRIES","USA","United States of America",2016,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",97.7
+"COUNTRIES","USA","United States of America",2016,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",95
+"COUNTRIES","USA","United States of America",2016,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",2015,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",94.7
+"COUNTRIES","USA","United States of America",2015,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",97.8
+"COUNTRIES","USA","United States of America",2015,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",95
+"COUNTRIES","USA","United States of America",2015,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",2014,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",95
+"COUNTRIES","USA","United States of America",2014,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",98
+"COUNTRIES","USA","United States of America",2014,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",95
+"COUNTRIES","USA","United States of America",2014,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",2013,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",94.3
+"COUNTRIES","USA","United States of America",2013,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",97.5
+"COUNTRIES","USA","United States of America",2013,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",2013,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",2012,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",94
+"COUNTRIES","USA","United States of America",2012,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",97
+"COUNTRIES","USA","United States of America",2012,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",2012,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",2011,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",96
+"COUNTRIES","USA","United States of America",2011,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",98
+"COUNTRIES","USA","United States of America",2011,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",2011,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",2010,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",97.7
+"COUNTRIES","USA","United States of America",2010,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",94.5
+"COUNTRIES","USA","United States of America",2010,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",95
+"COUNTRIES","USA","United States of America",2010,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",2009,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",98
+"COUNTRIES","USA","United States of America",2009,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",95
+"COUNTRIES","USA","United States of America",2009,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",2009,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",95
+"COUNTRIES","USA","United States of America",2008,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",99
+"COUNTRIES","USA","United States of America",2008,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",96
+"COUNTRIES","USA","United States of America",2008,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",2008,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",99
+"COUNTRIES","USA","United States of America",2007,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",96
+"COUNTRIES","USA","United States of America",2007,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",98
+"COUNTRIES","USA","United States of America",2007,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",2007,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",99
+"COUNTRIES","USA","United States of America",2006,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",99
+"COUNTRIES","USA","United States of America",2006,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",96
+"COUNTRIES","USA","United States of America",2006,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",99
+"COUNTRIES","USA","United States of America",2006,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",2005,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",96
+"COUNTRIES","USA","United States of America",2005,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",99
+"COUNTRIES","USA","United States of America",2005,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",99
+"COUNTRIES","USA","United States of America",2005,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",2004,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",99
+"COUNTRIES","USA","United States of America",2004,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",96
+"COUNTRIES","USA","United States of America",2004,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",2004,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",99
+"COUNTRIES","USA","United States of America",2003,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",96
+"COUNTRIES","USA","United States of America",2003,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",99.2
+"COUNTRIES","USA","United States of America",2003,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",2003,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",99
+"COUNTRIES","USA","United States of America",2002,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",97.4
+"COUNTRIES","USA","United States of America",2002,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",93.9
+"COUNTRIES","USA","United States of America",2002,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",2002,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",2001,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",94
+"COUNTRIES","USA","United States of America",2001,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",2001,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",2000,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",94
+"COUNTRIES","USA","United States of America",2000,"DTPCV1","DTP-containing vaccine, 1st dose","OFFICIAL","Official coverage",99.99
+"COUNTRIES","USA","United States of America",2000,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",2000,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",99
+"COUNTRIES","USA","United States of America",1999,"DTPCV3","DTP-containing vaccine, 3rd dose","ADMIN","Administrative coverage",95.9
+"COUNTRIES","USA","United States of America",1999,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",96
+"COUNTRIES","USA","United States of America",1999,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",99
+"COUNTRIES","USA","United States of America",1999,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",1998,"DTPCV3","DTP-containing vaccine, 3rd dose","ADMIN","Administrative coverage",96
+"COUNTRIES","USA","United States of America",1998,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",96
+"COUNTRIES","USA","United States of America",1998,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",1998,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",1997,"DTPCV3","DTP-containing vaccine, 3rd dose","ADMIN","Administrative coverage",96
+"COUNTRIES","USA","United States of America",1997,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",96
+"COUNTRIES","USA","United States of America",1997,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",1997,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",1996,"DTPCV3","DTP-containing vaccine, 3rd dose","ADMIN","Administrative coverage",95
+"COUNTRIES","USA","United States of America",1996,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",95
+"COUNTRIES","USA","United States of America",1996,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",1996,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",95
+"COUNTRIES","USA","United States of America",1995,"DTPCV3","DTP-containing vaccine, 3rd dose","ADMIN","Administrative coverage",95
+"COUNTRIES","USA","United States of America",1995,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",95
+"COUNTRIES","USA","United States of America",1995,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",95
+"COUNTRIES","USA","United States of America",1995,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",1994,"DTPCV3","DTP-containing vaccine, 3rd dose","ADMIN","Administrative coverage",94
+"COUNTRIES","USA","United States of America",1994,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",94
+"COUNTRIES","USA","United States of America",1994,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",1994,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1993,"DTPCV3","DTP-containing vaccine, 3rd dose","ADMIN","Administrative coverage",88
+"COUNTRIES","USA","United States of America",1993,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",88
+"COUNTRIES","USA","United States of America",1993,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",1993,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",88
+"COUNTRIES","USA","United States of America",1992,"DTPCV3","DTP-containing vaccine, 3rd dose","ADMIN","Administrative coverage",83
+"COUNTRIES","USA","United States of America",1992,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",83
+"COUNTRIES","USA","United States of America",1992,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",83
+"COUNTRIES","USA","United States of America",1992,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",1991,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",69
+"COUNTRIES","USA","United States of America",1991,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",95
+"COUNTRIES","USA","United States of America",1991,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",86
+"COUNTRIES","USA","United States of America",1990,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",90
+"COUNTRIES","USA","United States of America",1990,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",1989,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",1989,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1988,"DTPCV3","DTP-containing vaccine, 3rd dose","ADMIN","Administrative coverage",97
+"COUNTRIES","USA","United States of America",1988,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",1988,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1987,"DTPCV3","DTP-containing vaccine, 3rd dose","ADMIN","Administrative coverage",97
+"COUNTRIES","USA","United States of America",1987,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1987,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",1986,"DTPCV3","DTP-containing vaccine, 3rd dose","ADMIN","Administrative coverage",97
+"COUNTRIES","USA","United States of America",1986,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",1986,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1985,"DTPCV3","DTP-containing vaccine, 3rd dose","ADMIN","Administrative coverage",96
+"COUNTRIES","USA","United States of America",1985,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",96
+"COUNTRIES","USA","United States of America",1985,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",1985,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",1984,"DTPCV3","DTP-containing vaccine, 3rd dose","ADMIN","Administrative coverage",97
+"COUNTRIES","USA","United States of America",1984,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",97
+"COUNTRIES","USA","United States of America",1984,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1984,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",1983,"DTPCV3","DTP-containing vaccine, 3rd dose","ADMIN","Administrative coverage",97
+"COUNTRIES","USA","United States of America",1983,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",97
+"COUNTRIES","USA","United States of America",1983,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",1983,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1982,"DTPCV3","DTP-containing vaccine, 3rd dose","ADMIN","Administrative coverage",96
+"COUNTRIES","USA","United States of America",1982,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",96
+"COUNTRIES","USA","United States of America",1982,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",1982,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",1981,"DTPCV3","DTP-containing vaccine, 3rd dose","ADMIN","Administrative coverage",96
+"COUNTRIES","USA","United States of America",1981,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",96
+"COUNTRIES","USA","United States of America",1981,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",1981,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",1980,"DTPCV3","DTP-containing vaccine, 3rd dose","ADMIN","Administrative coverage",96
+"COUNTRIES","USA","United States of America",1980,"DTPCV3","DTP-containing vaccine, 3rd dose","OFFICIAL","Official coverage",96
+"COUNTRIES","USA","United States of America",1980,"DTPCV1","DTP-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",1980,"DTPCV3","DTP-containing vaccine, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",2023,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2022,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",92.7
+"COUNTRIES","USA","United States of America",2022,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2021,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",91.9
+"COUNTRIES","USA","United States of America",2021,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2020,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",91.4
+"COUNTRIES","USA","United States of America",2020,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",2019,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",91
+"COUNTRIES","USA","United States of America",2019,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",2018,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",91.4
+"COUNTRIES","USA","United States of America",2018,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",2017,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",91
+"COUNTRIES","USA","United States of America",2017,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",2016,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",92.6
+"COUNTRIES","USA","United States of America",2016,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2015,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",91.6
+"COUNTRIES","USA","United States of America",2015,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2014,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",92
+"COUNTRIES","USA","United States of America",2014,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2013,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",91
+"COUNTRIES","USA","United States of America",2013,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",2012,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",90
+"COUNTRIES","USA","United States of America",2012,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",90
+"COUNTRIES","USA","United States of America",2011,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",91
+"COUNTRIES","USA","United States of America",2011,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",2010,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",91.3
+"COUNTRIES","USA","United States of America",2010,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2009,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",92
+"COUNTRIES","USA","United States of America",2009,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2008,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",94
+"COUNTRIES","USA","United States of America",2008,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",2007,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",93
+"COUNTRIES","USA","United States of America",2007,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2006,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",93
+"COUNTRIES","USA","United States of America",2006,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2005,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",93
+"COUNTRIES","USA","United States of America",2005,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2004,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",92
+"COUNTRIES","USA","United States of America",2004,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2003,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",91.9
+"COUNTRIES","USA","United States of America",2003,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2002,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",88.3
+"COUNTRIES","USA","United States of America",2002,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",88
+"COUNTRIES","USA","United States of America",2001,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",89
+"COUNTRIES","USA","United States of America",2001,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",89
+"COUNTRIES","USA","United States of America",2000,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",90
+"COUNTRIES","USA","United States of America",2000,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",90
+"COUNTRIES","USA","United States of America",1999,"HEPB3","HepB, 3rd dose","ADMIN","Administrative coverage",88.1
+"COUNTRIES","USA","United States of America",1999,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",88
+"COUNTRIES","USA","United States of America",1999,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",88
+"COUNTRIES","USA","United States of America",1998,"HEPB3","HepB, 3rd dose","ADMIN","Administrative coverage",87
+"COUNTRIES","USA","United States of America",1998,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",87
+"COUNTRIES","USA","United States of America",1998,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",87
+"COUNTRIES","USA","United States of America",1997,"HEPB3","HepB, 3rd dose","ADMIN","Administrative coverage",84
+"COUNTRIES","USA","United States of America",1997,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",84
+"COUNTRIES","USA","United States of America",1997,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",84
+"COUNTRIES","USA","United States of America",1996,"HEPB3","HepB, 3rd dose","ADMIN","Administrative coverage",82
+"COUNTRIES","USA","United States of America",1996,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",82
+"COUNTRIES","USA","United States of America",1996,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",82
+"COUNTRIES","USA","United States of America",1995,"HEPB3","HepB, 3rd dose","ADMIN","Administrative coverage",68
+"COUNTRIES","USA","United States of America",1995,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",68
+"COUNTRIES","USA","United States of America",1995,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",68
+"COUNTRIES","USA","United States of America",1994,"HEPB3","HepB, 3rd dose","ADMIN","Administrative coverage",42
+"COUNTRIES","USA","United States of America",1994,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",42
+"COUNTRIES","USA","United States of America",1994,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",42
+"COUNTRIES","USA","United States of America",1993,"HEPB3","HepB, 3rd dose","ADMIN","Administrative coverage",16
+"COUNTRIES","USA","United States of America",1993,"HEPB3","HepB, 3rd dose","OFFICIAL","Official coverage",16
+"COUNTRIES","USA","United States of America",1993,"HEPB3","HepB, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",16
+"COUNTRIES","USA","United States of America",2023,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",95
+"COUNTRIES","USA","United States of America",2023,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2022,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",91.6
+"COUNTRIES","USA","United States of America",2022,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2022,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",95
+"COUNTRIES","USA","United States of America",2021,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",91.6
+"COUNTRIES","USA","United States of America",2021,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",95
+"COUNTRIES","USA","United States of America",2021,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2020,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",90.7
+"COUNTRIES","USA","United States of America",2020,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",95
+"COUNTRIES","USA","United States of America",2020,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",2019,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",90.4
+"COUNTRIES","USA","United States of America",2019,"MCV2","Measles-containing vaccine, 2nd dose","OFFICIAL","Official coverage",95
+"COUNTRIES","USA","United States of America",2019,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",95
+"COUNTRIES","USA","United States of America",2019,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",90
+"COUNTRIES","USA","United States of America",2018,"MCV2","Measles-containing vaccine, 2nd dose","OFFICIAL","Official coverage",94.3
+"COUNTRIES","USA","United States of America",2018,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",91.5
+"COUNTRIES","USA","United States of America",2018,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",2018,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2017,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",91
+"COUNTRIES","USA","United States of America",2017,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",2017,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",2016,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",91.9
+"COUNTRIES","USA","United States of America",2016,"MCV2","Measles-containing vaccine, 2nd dose","OFFICIAL","Official coverage",94
+"COUNTRIES","USA","United States of America",2016,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2016,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",2015,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",91.5
+"COUNTRIES","USA","United States of America",2015,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2015,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2014,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",92
+"COUNTRIES","USA","United States of America",2014,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2014,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2013,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",92
+"COUNTRIES","USA","United States of America",2013,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2013,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",2012,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",91
+"COUNTRIES","USA","United States of America",2012,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",2012,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",2011,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",91.5
+"COUNTRIES","USA","United States of America",2011,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2011,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",90
+"COUNTRIES","USA","United States of America",2010,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",90.2
+"COUNTRIES","USA","United States of America",2010,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2010,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",89
+"COUNTRIES","USA","United States of America",2009,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",90
+"COUNTRIES","USA","United States of America",2009,"MCV2","Measles-containing vaccine, 2nd dose","OFFICIAL","Official coverage",87.7
+"COUNTRIES","USA","United States of America",2009,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",90
+"COUNTRIES","USA","United States of America",2009,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",88
+"COUNTRIES","USA","United States of America",2008,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",92
+"COUNTRIES","USA","United States of America",2008,"MCV2","Measles-containing vaccine, 2nd dose","OFFICIAL","Official coverage",87
+"COUNTRIES","USA","United States of America",2008,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2008,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",87
+"COUNTRIES","USA","United States of America",2007,"MCV2","Measles-containing vaccine, 2nd dose","OFFICIAL","Official coverage",85.7
+"COUNTRIES","USA","United States of America",2007,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",92
+"COUNTRIES","USA","United States of America",2007,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2007,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",86
+"COUNTRIES","USA","United States of America",2006,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",92
+"COUNTRIES","USA","United States of America",2006,"MCV2","Measles-containing vaccine, 2nd dose","OFFICIAL","Official coverage",86
+"COUNTRIES","USA","United States of America",2006,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",86
+"COUNTRIES","USA","United States of America",2006,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2005,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",92
+"COUNTRIES","USA","United States of America",2005,"MCV2","Measles-containing vaccine, 2nd dose","OFFICIAL","Official coverage",86.3
+"COUNTRIES","USA","United States of America",2005,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",86
+"COUNTRIES","USA","United States of America",2005,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2004,"MCV2","Measles-containing vaccine, 2nd dose","OFFICIAL","Official coverage",86.1
+"COUNTRIES","USA","United States of America",2004,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",93
+"COUNTRIES","USA","United States of America",2004,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",86
+"COUNTRIES","USA","United States of America",2004,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2003,"MCV2","Measles-containing vaccine, 2nd dose","OFFICIAL","Official coverage",86
+"COUNTRIES","USA","United States of America",2003,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",92.6
+"COUNTRIES","USA","United States of America",2003,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2003,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",86
+"COUNTRIES","USA","United States of America",2002,"MCV2","Measles-containing vaccine, 2nd dose","OFFICIAL","Official coverage",86
+"COUNTRIES","USA","United States of America",2002,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",91.3
+"COUNTRIES","USA","United States of America",2002,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",86
+"COUNTRIES","USA","United States of America",2002,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",2001,"MCV2","Measles-containing vaccine, 2nd dose","OFFICIAL","Official coverage",85.7
+"COUNTRIES","USA","United States of America",2001,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",91
+"COUNTRIES","USA","United States of America",2001,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",2001,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",86
+"COUNTRIES","USA","United States of America",2000,"MCV2","Measles-containing vaccine, 2nd dose","OFFICIAL","Official coverage",84.7
+"COUNTRIES","USA","United States of America",2000,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",91
+"COUNTRIES","USA","United States of America",2000,"MCV2","Measles-containing vaccine, 2nd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",85
+"COUNTRIES","USA","United States of America",2000,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",1999,"MCV1","Measles-containing vaccine, 1st dose","ADMIN","Administrative coverage",91.5
+"COUNTRIES","USA","United States of America",1999,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",92
+"COUNTRIES","USA","United States of America",1999,"MCV2","Measles-containing vaccine, 2nd dose","OFFICIAL","Official coverage",80.7
+"COUNTRIES","USA","United States of America",1999,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",1998,"MCV1","Measles-containing vaccine, 1st dose","ADMIN","Administrative coverage",92
+"COUNTRIES","USA","United States of America",1998,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",92
+"COUNTRIES","USA","United States of America",1998,"MCV2","Measles-containing vaccine, 2nd dose","OFFICIAL","Official coverage",76.9
+"COUNTRIES","USA","United States of America",1998,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",1997,"MCV1","Measles-containing vaccine, 1st dose","ADMIN","Administrative coverage",91
+"COUNTRIES","USA","United States of America",1997,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",91
+"COUNTRIES","USA","United States of America",1997,"MCV2","Measles-containing vaccine, 2nd dose","OFFICIAL","Official coverage",71.6
+"COUNTRIES","USA","United States of America",1997,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",1996,"MCV1","Measles-containing vaccine, 1st dose","ADMIN","Administrative coverage",91
+"COUNTRIES","USA","United States of America",1996,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",91
+"COUNTRIES","USA","United States of America",1996,"MCV2","Measles-containing vaccine, 2nd dose","OFFICIAL","Official coverage",68
+"COUNTRIES","USA","United States of America",1996,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",1995,"MCV1","Measles-containing vaccine, 1st dose","ADMIN","Administrative coverage",88
+"COUNTRIES","USA","United States of America",1995,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",88
+"COUNTRIES","USA","United States of America",1995,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",88
+"COUNTRIES","USA","United States of America",1994,"MCV1","Measles-containing vaccine, 1st dose","ADMIN","Administrative coverage",89
+"COUNTRIES","USA","United States of America",1994,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",89
+"COUNTRIES","USA","United States of America",1994,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",89
+"COUNTRIES","USA","United States of America",1993,"MCV1","Measles-containing vaccine, 1st dose","ADMIN","Administrative coverage",84
+"COUNTRIES","USA","United States of America",1993,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",84
+"COUNTRIES","USA","United States of America",1993,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",84
+"COUNTRIES","USA","United States of America",1992,"MCV1","Measles-containing vaccine, 1st dose","ADMIN","Administrative coverage",83
+"COUNTRIES","USA","United States of America",1992,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",83
+"COUNTRIES","USA","United States of America",1992,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",83
+"COUNTRIES","USA","United States of America",1991,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",82
+"COUNTRIES","USA","United States of America",1991,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",87
+"COUNTRIES","USA","United States of America",1990,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",90
+"COUNTRIES","USA","United States of America",1989,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",1988,"MCV1","Measles-containing vaccine, 1st dose","ADMIN","Administrative coverage",98
+"COUNTRIES","USA","United States of America",1988,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",98
+"COUNTRIES","USA","United States of America",1988,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",1987,"MCV1","Measles-containing vaccine, 1st dose","ADMIN","Administrative coverage",82
+"COUNTRIES","USA","United States of America",1987,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",82
+"COUNTRIES","USA","United States of America",1987,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",82
+"COUNTRIES","USA","United States of America",1986,"MCV1","Measles-containing vaccine, 1st dose","ADMIN","Administrative coverage",97
+"COUNTRIES","USA","United States of America",1986,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",97
+"COUNTRIES","USA","United States of America",1986,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1985,"MCV1","Measles-containing vaccine, 1st dose","ADMIN","Administrative coverage",97
+"COUNTRIES","USA","United States of America",1985,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",97
+"COUNTRIES","USA","United States of America",1985,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1984,"MCV1","Measles-containing vaccine, 1st dose","ADMIN","Administrative coverage",98
+"COUNTRIES","USA","United States of America",1984,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",98
+"COUNTRIES","USA","United States of America",1984,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",1983,"MCV1","Measles-containing vaccine, 1st dose","ADMIN","Administrative coverage",98
+"COUNTRIES","USA","United States of America",1983,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",98
+"COUNTRIES","USA","United States of America",1983,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",1982,"MCV1","Measles-containing vaccine, 1st dose","ADMIN","Administrative coverage",97
+"COUNTRIES","USA","United States of America",1982,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",97
+"COUNTRIES","USA","United States of America",1982,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1981,"MCV1","Measles-containing vaccine, 1st dose","ADMIN","Administrative coverage",97
+"COUNTRIES","USA","United States of America",1981,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",97
+"COUNTRIES","USA","United States of America",1981,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1980,"MCV1","Measles-containing vaccine, 1st dose","ADMIN","Administrative coverage",86
+"COUNTRIES","USA","United States of America",1980,"MCV1","Measles-containing vaccine, 1st dose","OFFICIAL","Official coverage",86
+"COUNTRIES","USA","United States of America",1980,"MCV1","Measles-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",86
+"COUNTRIES","USA","United States of America",2023,"IPV1","Inactivated polio-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",2023,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2022,"IPV2","Inactivated polio-containing vaccine, 2nd dose","OFFICIAL","Official coverage",96
+"COUNTRIES","USA","United States of America",2022,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",93.4
+"COUNTRIES","USA","United States of America",2022,"IPV1","Inactivated polio-containing vaccine, 1st dose","OFFICIAL","Official coverage",97.3
+"COUNTRIES","USA","United States of America",2022,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2022,"IPV1","Inactivated polio-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",2021,"IPV2","Inactivated polio-containing vaccine, 2nd dose","OFFICIAL","Official coverage",95.4
+"COUNTRIES","USA","United States of America",2021,"IPV1","Inactivated polio-containing vaccine, 1st dose","OFFICIAL","Official coverage",96.7
+"COUNTRIES","USA","United States of America",2021,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",92.7
+"COUNTRIES","USA","United States of America",2021,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2021,"IPV1","Inactivated polio-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",2020,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",92.1
+"COUNTRIES","USA","United States of America",2020,"IPV1","Inactivated polio-containing vaccine, 1st dose","OFFICIAL","Official coverage",96.3
+"COUNTRIES","USA","United States of America",2020,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2020,"IPV1","Inactivated polio-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",2019,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",92.7
+"COUNTRIES","USA","United States of America",2019,"IPV1","Inactivated polio-containing vaccine, 1st dose","OFFICIAL","Official coverage",96.6
+"COUNTRIES","USA","United States of America",2019,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2019,"IPV1","Inactivated polio-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",2018,"IPV1","Inactivated polio-containing vaccine, 1st dose","OFFICIAL","Official coverage",96.3
+"COUNTRIES","USA","United States of America",2018,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",92.7
+"COUNTRIES","USA","United States of America",2018,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2018,"IPV1","Inactivated polio-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",2017,"IPV1","Inactivated polio-containing vaccine, 1st dose","OFFICIAL","Official coverage",97
+"COUNTRIES","USA","United States of America",2017,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",92
+"COUNTRIES","USA","United States of America",2017,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2017,"IPV1","Inactivated polio-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",2016,"IPV1","Inactivated polio-containing vaccine, 1st dose","OFFICIAL","Official coverage",97.3
+"COUNTRIES","USA","United States of America",2016,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",93.7
+"COUNTRIES","USA","United States of America",2016,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",2016,"IPV1","Inactivated polio-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",2015,"IPV1","Inactivated polio-containing vaccine, 1st dose","OFFICIAL","Official coverage",97.1
+"COUNTRIES","USA","United States of America",2015,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",93.3
+"COUNTRIES","USA","United States of America",2015,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2015,"IPV1","Inactivated polio-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",2014,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",93
+"COUNTRIES","USA","United States of America",2014,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2013,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",92.8
+"COUNTRIES","USA","United States of America",2013,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2012,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",93
+"COUNTRIES","USA","United States of America",2012,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2011,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",94
+"COUNTRIES","USA","United States of America",2011,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",2010,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",94.4
+"COUNTRIES","USA","United States of America",2010,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2009,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",93
+"COUNTRIES","USA","United States of America",2009,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2008,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",94
+"COUNTRIES","USA","United States of America",2008,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",2007,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",93
+"COUNTRIES","USA","United States of America",2007,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2006,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",93
+"COUNTRIES","USA","United States of America",2006,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2005,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",92
+"COUNTRIES","USA","United States of America",2005,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2004,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",92
+"COUNTRIES","USA","United States of America",2004,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2003,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",91
+"COUNTRIES","USA","United States of America",2003,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",2002,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",89.8
+"COUNTRIES","USA","United States of America",2002,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",90
+"COUNTRIES","USA","United States of America",2001,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",89
+"COUNTRIES","USA","United States of America",2001,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",89
+"COUNTRIES","USA","United States of America",2000,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",90
+"COUNTRIES","USA","United States of America",2000,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",90
+"COUNTRIES","USA","United States of America",1999,"POL3","Polio, 3rd dose","ADMIN","Administrative coverage",89.6
+"COUNTRIES","USA","United States of America",1999,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",90
+"COUNTRIES","USA","United States of America",1999,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",90
+"COUNTRIES","USA","United States of America",1998,"POL3","Polio, 3rd dose","ADMIN","Administrative coverage",91
+"COUNTRIES","USA","United States of America",1998,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",91
+"COUNTRIES","USA","United States of America",1998,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",1997,"POL3","Polio, 3rd dose","ADMIN","Administrative coverage",91
+"COUNTRIES","USA","United States of America",1997,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",91
+"COUNTRIES","USA","United States of America",1997,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",1996,"POL3","Polio, 3rd dose","ADMIN","Administrative coverage",91
+"COUNTRIES","USA","United States of America",1996,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",91
+"COUNTRIES","USA","United States of America",1996,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",1995,"POL3","Polio, 3rd dose","ADMIN","Administrative coverage",88
+"COUNTRIES","USA","United States of America",1995,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",88
+"COUNTRIES","USA","United States of America",1995,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",88
+"COUNTRIES","USA","United States of America",1994,"POL3","Polio, 3rd dose","ADMIN","Administrative coverage",84
+"COUNTRIES","USA","United States of America",1994,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",83
+"COUNTRIES","USA","United States of America",1994,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",84
+"COUNTRIES","USA","United States of America",1993,"POL3","Polio, 3rd dose","ADMIN","Administrative coverage",79
+"COUNTRIES","USA","United States of America",1993,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",79
+"COUNTRIES","USA","United States of America",1993,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",79
+"COUNTRIES","USA","United States of America",1992,"POL3","Polio, 3rd dose","ADMIN","Administrative coverage",72
+"COUNTRIES","USA","United States of America",1992,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",72
+"COUNTRIES","USA","United States of America",1992,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",72
+"COUNTRIES","USA","United States of America",1991,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",53
+"COUNTRIES","USA","United States of America",1991,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",78
+"COUNTRIES","USA","United States of America",1990,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",85
+"COUNTRIES","USA","United States of America",1989,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",1988,"POL3","Polio, 3rd dose","ADMIN","Administrative coverage",97
+"COUNTRIES","USA","United States of America",1988,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",97
+"COUNTRIES","USA","United States of America",1988,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1987,"POL3","Polio, 3rd dose","ADMIN","Administrative coverage",24
+"COUNTRIES","USA","United States of America",1987,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",24
+"COUNTRIES","USA","United States of America",1987,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1986,"POL3","Polio, 3rd dose","ADMIN","Administrative coverage",97
+"COUNTRIES","USA","United States of America",1986,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",97
+"COUNTRIES","USA","United States of America",1986,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1985,"POL3","Polio, 3rd dose","ADMIN","Administrative coverage",96
+"COUNTRIES","USA","United States of America",1985,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",96
+"COUNTRIES","USA","United States of America",1985,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",1984,"POL3","Polio, 3rd dose","ADMIN","Administrative coverage",97
+"COUNTRIES","USA","United States of America",1984,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",97
+"COUNTRIES","USA","United States of America",1984,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1983,"POL3","Polio, 3rd dose","ADMIN","Administrative coverage",97
+"COUNTRIES","USA","United States of America",1983,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",97
+"COUNTRIES","USA","United States of America",1983,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1982,"POL3","Polio, 3rd dose","ADMIN","Administrative coverage",97
+"COUNTRIES","USA","United States of America",1982,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",97
+"COUNTRIES","USA","United States of America",1982,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1981,"POL3","Polio, 3rd dose","ADMIN","Administrative coverage",96
+"COUNTRIES","USA","United States of America",1981,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",96
+"COUNTRIES","USA","United States of America",1981,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",96
+"COUNTRIES","USA","United States of America",1980,"POL3","Polio, 3rd dose","ADMIN","Administrative coverage",95
+"COUNTRIES","USA","United States of America",1980,"POL3","Polio, 3rd dose","OFFICIAL","Official coverage",95
+"COUNTRIES","USA","United States of America",1980,"POL3","Polio, 3rd dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",95
+"COUNTRIES","USA","United States of America",2023,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2022,"RCV1","Rubella-containing vaccine, 1st dose","OFFICIAL","Official coverage",91.6
+"COUNTRIES","USA","United States of America",2022,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2021,"RCV1","Rubella-containing vaccine, 1st dose","OFFICIAL","Official coverage",91.6
+"COUNTRIES","USA","United States of America",2021,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2020,"RCV1","Rubella-containing vaccine, 1st dose","OFFICIAL","Official coverage",90.7
+"COUNTRIES","USA","United States of America",2020,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",2019,"RCV1","Rubella-containing vaccine, 1st dose","OFFICIAL","Official coverage",90.4
+"COUNTRIES","USA","United States of America",2019,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",90
+"COUNTRIES","USA","United States of America",2018,"RCV1","Rubella-containing vaccine, 1st dose","OFFICIAL","Official coverage",91.5
+"COUNTRIES","USA","United States of America",2018,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2017,"RCV1","Rubella-containing vaccine, 1st dose","OFFICIAL","Official coverage",91
+"COUNTRIES","USA","United States of America",2017,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",2016,"RCV1","Rubella-containing vaccine, 1st dose","OFFICIAL","Official coverage",91.9
+"COUNTRIES","USA","United States of America",2016,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2015,"RCV1","Rubella-containing vaccine, 1st dose","OFFICIAL","Official coverage",91.5
+"COUNTRIES","USA","United States of America",2015,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2014,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2013,"RCV1","Rubella-containing vaccine, 1st dose","OFFICIAL","Official coverage",90.8
+"COUNTRIES","USA","United States of America",2013,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2012,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",2011,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2010,"RCV1","Rubella-containing vaccine, 1st dose","OFFICIAL","Official coverage",90.2
+"COUNTRIES","USA","United States of America",2010,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2009,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",90
+"COUNTRIES","USA","United States of America",2008,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2007,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2006,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2005,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",2004,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2003,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",93
+"COUNTRIES","USA","United States of America",2002,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",2001,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",2000,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",1999,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",1998,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",92
+"COUNTRIES","USA","United States of America",1997,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",1996,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",91
+"COUNTRIES","USA","United States of America",1995,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",88
+"COUNTRIES","USA","United States of America",1994,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",89
+"COUNTRIES","USA","United States of America",1993,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",84
+"COUNTRIES","USA","United States of America",1992,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",83
+"COUNTRIES","USA","United States of America",1991,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",87
+"COUNTRIES","USA","United States of America",1990,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",90
+"COUNTRIES","USA","United States of America",1989,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",94
+"COUNTRIES","USA","United States of America",1988,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",1987,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",82
+"COUNTRIES","USA","United States of America",1986,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1985,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1984,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",1983,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",98
+"COUNTRIES","USA","United States of America",1982,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1981,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",97
+"COUNTRIES","USA","United States of America",1980,"RCV1","Rubella-containing vaccine, 1st dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",86
+"COUNTRIES","USA","United States of America",2002,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",20.9
+"COUNTRIES","USA","United States of America",2002,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",21
+"COUNTRIES","USA","United States of America",2003,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",39.2
+"COUNTRIES","USA","United States of America",2003,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",39
+"COUNTRIES","USA","United States of America",2004,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",48
+"COUNTRIES","USA","United States of America",2004,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",48
+"COUNTRIES","USA","United States of America",2005,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",50
+"COUNTRIES","USA","United States of America",2005,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",50
+"COUNTRIES","USA","United States of America",2006,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",50
+"COUNTRIES","USA","United States of America",2006,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",50
+"COUNTRIES","USA","United States of America",2007,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",53
+"COUNTRIES","USA","United States of America",2007,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",53
+"COUNTRIES","USA","United States of America",2008,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",55
+"COUNTRIES","USA","United States of America",2008,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",55
+"COUNTRIES","USA","United States of America",2009,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",61
+"COUNTRIES","USA","United States of America",2010,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",64.1
+"COUNTRIES","USA","United States of America",2010,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",64
+"COUNTRIES","USA","United States of America",2011,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",69
+"COUNTRIES","USA","United States of America",2011,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",69
+"COUNTRIES","USA","United States of America",2012,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",72
+"COUNTRIES","USA","United States of America",2012,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",72
+"COUNTRIES","USA","United States of America",2013,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",74
+"COUNTRIES","USA","United States of America",2013,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",74
+"COUNTRIES","USA","United States of America",2014,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",72
+"COUNTRIES","USA","United States of America",2014,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",72
+"COUNTRIES","USA","United States of America",2015,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",72.4
+"COUNTRIES","USA","United States of America",2015,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",72
+"COUNTRIES","USA","United States of America",2016,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",68.15
+"COUNTRIES","USA","United States of America",2016,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",64
+"COUNTRIES","USA","United States of America",2017,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",67
+"COUNTRIES","USA","United States of America",2017,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",63
+"COUNTRIES","USA","United States of America",2018,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",69.65
+"COUNTRIES","USA","United States of America",2018,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",66
+"COUNTRIES","USA","United States of America",2019,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",70.85
+"COUNTRIES","USA","United States of America",2019,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",67
+"COUNTRIES","USA","United States of America",2020,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",72.6
+"COUNTRIES","USA","United States of America",2020,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",69
+"COUNTRIES","USA","United States of America",2021,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",75.25
+"COUNTRIES","USA","United States of America",2021,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",72
+"COUNTRIES","USA","United States of America",2022,"HEPB_BD","HepB, birth dose","OFFICIAL","Official coverage",77.3
+"COUNTRIES","USA","United States of America",2022,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",75
+"COUNTRIES","USA","United States of America",2023,"HEPB_BD","HepB, birth dose","WUENIC","WHO/UNICEF Estimates of National Immunization Coverage",75
